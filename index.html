@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Korona Gombaipari Egyesülés – Közép-Európa vezető gombaipari csoportosulása. Friss gombák, gombacsíra, gombakomposzt. 30+ év tapasztalat, 45.000 m² termesztőfelület.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Korona Gomba – A természet koronája">
+<meta property="og:description" content="30 éves tapasztalat, 45.000 m² termesztőfelület – minden nap frissen, a legmagasabb minőségben.">
+<meta property="og:image" content="assets/img/hero.jpg">
+<title>Korona Gomba – Közép-Európa vezető gombaipari egyesülése</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ═══ VIDEO HERO OVERRIDE ═══ */
+.hero.hero-video {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder bg amíg nincs videó */
+.hero-video-bg video:not([src]) {
+  background: linear-gradient(135deg, #0a0f0a 0%, #1a2e1a 40%, #0d1a0d 100%);
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.35) 40%,
+    rgba(0,0,0,0.5) 100%
+  );
+  z-index: 1;
+}
+
+.hero-video-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  text-align: center;
+  padding: 120px 24px 60px;
+}
+
+.hero-video-content .hero-pill {
+  justify-content: center;
+}
+
+.hero-video-content h1 {
+  text-align: center;
+}
+
+.hero-video-content .hero-sub {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 36px;
+}
+
+.hero-video-content .hero-actions {
+  justify-content: center;
+}
+
+.hero-video-content .hero-stats {
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.hero.hero-video .scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* ═══ NAV DROPDOWN - hosszabb lista támogatás ═══ */
+.nav-dropdown {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* ═══ TERMÉKKÁRTYA HOVER EFFEKT ═══ */
+/* Alap: wk-body a kártya aljára csúszik, csak tag+név látszik */
+.wk-card {
+  overflow: hidden;
+}
+
+.wk-card .wk-body {
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Kártya-specifikus eltolás alapállapotban (lefelé) */
+.wk-c1 .wk-body { transform: translateY(calc(100% - 160px)); }
+.wk-c2 .wk-body { transform: translateY(calc(100% - 150px)); }
+.wk-c3 .wk-body { transform: translateY(calc(100% - 150px)); }
+.wk-c4 .wk-body { transform: translateY(calc(100% - 150px)); }
+
+/* Hover: visszamegy eredeti pozícióra */
+.wk-card:hover .wk-body { transform: translateY(0); }
+
+/* Dekoratív elemek fade ki alapban, fade be hoverre */
+.wk-card .wk-chips,
+.wk-card .wk-phases,
+.wk-card .wk-c3-stats,
+.wk-card .wk-badges,
+.wk-card .wk-rings-wrap,
+.wk-card .wk-hex-bg,
+.wk-card .wk-hex-ring,
+.wk-card .wk-scan,
+.wk-card .wk-big-icon,
+.wk-card .wk-lab-icon {
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+.wk-card:hover .wk-chips,
+.wk-card:hover .wk-phases,
+.wk-card:hover .wk-c3-stats,
+.wk-card:hover .wk-badges,
+.wk-card:hover .wk-rings-wrap,
+.wk-card:hover .wk-hex-bg,
+.wk-card:hover .wk-hex-ring,
+.wk-card:hover .wk-scan,
+.wk-card:hover .wk-big-icon,
+.wk-card:hover .wk-lab-icon {
+  opacity: 1;
+}
+
+/* Alul lévő adatok (desc, usps, sizes, cta) elrejtése alapban */
+.wk-card .wk-desc,
+.wk-card .wk-usps,
+.wk-card .wk-sizes,
+.wk-card .wk-cta {
+  opacity: 0;
+  transition: opacity 0.35s ease 0.1s;
+}
+.wk-card:hover .wk-desc,
+.wk-card:hover .wk-usps,
+.wk-card:hover .wk-sizes,
+.wk-card:hover .wk-cta {
+  opacity: 1;
+}
+/* ═══ STATIKUS TICKER SÁV ═══ */
+.ticker-static .ticker-inner-static {
+  animation: none !important;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.ticker-static .ticker-item {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/* ═══ HERO PARTNER SZALAG ═══ */
+.hero-partners {
+  overflow: hidden;
+  padding: 32px 0 20px;
+  margin-bottom: 0;
+  position: relative;
+}
+.hero-partners-label {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hero-partners-label h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--txt, #1a1a1a);
+}
+.hero-partners-label h3 .italic {
+  font-style: italic;
+}
+
+/* Statikus ticker alatti hely */
+.ticker-static { margin-bottom: 12px !important; }
+
+/* Termékkategóriák feletti hely csökkentés */
+.wk { padding-top: 24px !important; }
+.hero-partners::before,
+.hero-partners::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-partners::before { left: 0; background: linear-gradient(90deg, var(--bg, #e8e4dc), transparent); }
+.hero-partners::after { right: 0; background: linear-gradient(270deg, var(--bg, #e8e4dc), transparent); }
+
+.hero-partners-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: hpScroll 35s linear infinite;
+}
+.hero-partners:hover .hero-partners-track {
+  animation-play-state: paused;
+}
+@keyframes hpScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.hp-card {
+  flex-shrink: 0;
+  width: 200px;
+  height: 120px;
+  background: rgba(255,255,255,.85);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  cursor: pointer;
+  transition: box-shadow .3s ease, transform .3s ease;
+  border: 1px solid rgba(0,0,0,.06);
+}
+.hp-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(40%);
+  transition: filter .3s ease;
+}
+.hp-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(46,139,46,.45), 0 0 40px rgba(46,139,46,.2);
+  border-color: rgba(46,139,46,.4);
+}
+.hp-card:hover img {
+  filter: grayscale(0%);
+}
+
+/* MODAL */
+.hp-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+.hp-modal.active { display: flex; }
+.hp-modal-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(6px);
+}
+.hp-modal-content {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 48px 56px;
+  text-align: center;
+  max-width: 360px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.25);
+}
+.hp-modal-content img {
+  max-width: 200px;
+  max-height: 120px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.hp-modal-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.hp-modal-close {
+  position: absolute;
+  top: 12px; right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  line-height: 1;
+}
+</style>
+</head>
+<body>
+
+<div class="page-transition"></div>
+<div class="mesh-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="termekek.html">Termékek</a>
+  <a href="galeria.html">Galéria</a>
+  <a href="receptek.html">Receptek</a>
+  <a href="kapcsolat.html" class="m-cta">Kontakt →</a>
+</div>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/img/logo.png" alt="Korona Gomba logó">
+    <div class="nav-logo-text">
+      <span class="brand">Korona Gomba</span>
+      <span class="sub">Gombaipari Egyesülés</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li class="has-dropdown">
+      <a href="index.html">Home</a>
+      <ul class="nav-dropdown">
+        <li><a href="rolunk.html">Rólunk</a></li>
+        <li><a href="cegtortenet.html">Cégtörténet</a></li>
+        <li><a href="minosegbiztositas.html">Minőségbiztosítás</a></li>
+        <li><a href="fenntarthato-jovo.html">Fenntartható jövő</a></li>
+        <li><a href="tarsadalmi-felelossegvallalas.html">Társadalmi felelősségvállalás</a></li>
+        <li><a href="karrier.html">Karrier</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <a href="termekek.html">Termékek</a>
+      <ul class="nav-dropdown">
+        <li><a href="gombacsira.html">Gombacsíra</a></li>
+        <li><a href="gombakomposzt.html">Gombakomposzt</a></li>
+        <li><a href="friss-gomba.html">Friss gomba</a></li>
+        <li><a href="gombakonzerv.html">Konzervgomba</a></li>
+      </ul>
+    </li>
+    <li><a href="galeria.html">Galéria</a></li>
+    <li><a href="receptek.html">Receptek</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="nav-lang">
+      <button class="lang-btn active">HU</button>
+      <button class="lang-btn">EN</button>
+      <button class="lang-btn">DE</button>
+    </div>
+    <a href="kapcsolat.html" class="btn-nav-cta">Kontakt →</a>
+    <button class="nav-burger" id="burger" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════ HERO ═══ -->
+<section class="hero hero-video">
+  <!-- Fullwidth video background -->
+  <div class="hero-video-bg">
+    <video autoplay muted loop playsinline id="heroVideo">
+      <!-- Később ide kerül a videó forrás, pl: -->
+      <!-- <source src="assets/video/hero.mp4" type="video/mp4"> -->
+    </video>
+    <div class="hero-video-overlay"></div>
+  </div>
+
+  <div class="hero-video-content">
+    <div class="hero-pill">
+      <div class="hero-pill-dot">🍄</div>
+      <span>Közép-Európa vezető gombaipari csoportosulása</span>
+    </div>
+
+    <h1>
+      A <span class="italic">természet</span><br>
+      <span class="red">koronája</span><br>
+      tányérodon.
+    </h1>
+
+    <div class="hero-actions">
+      <a href="#termekek" class="btn-primary">
+        Termékeink
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#rolunk" class="btn-secondary">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7.5l2 2L10 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Rólunk
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">30<sup>+</sup></div>
+        <div class="hero-stat-label">Év tapasztalat</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">45k</div>
+        <div class="hero-stat-label">M² termesztés</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">100<sup>+</sup></div>
+        <div class="hero-stat-label">Gombaház</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- STATIKUS SÁV - Üzemegységek -->
+<div class="ticker ticker-static" style="margin-top:24px">
+  <div class="ticker-inner ticker-inner-static">
+    <span class="ticker-item"><span class="ticker-gem"></span>Csíraüzem</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Komposztüzem</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Gombatermesztés</span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Hűtőház és csomagolóüzem</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Konzervüzem</span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Saját gépjárműflotta</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Minőség</span>
+  </div>
+</div>
+
+<!-- HERO PARTNER SZALAG -->
+<div class="hero-partners">
+  <div class="hero-partners-label">
+    <h3>Akik <span class="italic">megbíznak</span> bennünk.</h3>
+  </div>
+  <div class="hero-partners-track" id="heroPartnersTrack">
+    <div class="hp-card" data-name="Metro"><img src="assets/img/partners/metro.png" alt="Metro"></div>
+    <div class="hp-card" data-name="Lidl"><img src="assets/img/partners/lidl.png" alt="Lidl"></div>
+    <div class="hp-card" data-name="Spar"><img src="assets/img/partners/spar.png" alt="Spar"></div>
+    <div class="hp-card" data-name="Hofer"><img src="assets/img/partners/hofer.png" alt="Hofer"></div>
+    <div class="hp-card" data-name="Hoving Holland"><img src="assets/img/partners/hoving-holland.png" alt="Hoving Holland"></div>
+    <div class="hp-card" data-name="GTL Europe"><img src="assets/img/partners/gtl.png" alt="GTL Europe"></div>
+    <div class="hp-card" data-name="Fancom"><img src="assets/img/partners/fancom.png" alt="Fancom"></div>
+    <div class="hp-card" data-name="MC Substradd"><img src="assets/img/partners/mcsubstradd.png" alt="MC Substradd"></div>
+    <div class="hp-card" data-name="Masterlab"><img src="assets/img/partners/masterlab.png" alt="Masterlab"></div>
+    <div class="hp-card" data-name="EU Bio"><img src="assets/img/partners/bio-eu.png" alt="EU Bio"></div>
+    <div class="hp-card" data-name="IFS"><img src="assets/img/partners/ifs.png" alt="IFS"></div>
+    <div class="hp-card" data-name="Kiváló Magyar Élelmiszer"><img src="assets/img/partners/kivalo-magyar.png" alt="Kiváló Magyar Élelmiszer"></div>
+    <!-- duplicate -->
+    <div class="hp-card" data-name="Metro"><img src="assets/img/partners/metro.png" alt="Metro"></div>
+    <div class="hp-card" data-name="Lidl"><img src="assets/img/partners/lidl.png" alt="Lidl"></div>
+    <div class="hp-card" data-name="Spar"><img src="assets/img/partners/spar.png" alt="Spar"></div>
+    <div class="hp-card" data-name="Hofer"><img src="assets/img/partners/hofer.png" alt="Hofer"></div>
+    <div class="hp-card" data-name="Hoving Holland"><img src="assets/img/partners/hoving-holland.png" alt="Hoving Holland"></div>
+    <div class="hp-card" data-name="GTL Europe"><img src="assets/img/partners/gtl.png" alt="GTL Europe"></div>
+    <div class="hp-card" data-name="Fancom"><img src="assets/img/partners/fancom.png" alt="Fancom"></div>
+    <div class="hp-card" data-name="MC Substradd"><img src="assets/img/partners/mcsubstradd.png" alt="MC Substradd"></div>
+    <div class="hp-card" data-name="Masterlab"><img src="assets/img/partners/masterlab.png" alt="Masterlab"></div>
+    <div class="hp-card" data-name="EU Bio"><img src="assets/img/partners/bio-eu.png" alt="EU Bio"></div>
+    <div class="hp-card" data-name="IFS"><img src="assets/img/partners/ifs.png" alt="IFS"></div>
+    <div class="hp-card" data-name="Kiváló Magyar Élelmiszer"><img src="assets/img/partners/kivalo-magyar.png" alt="Kiváló Magyar Élelmiszer"></div>
+  </div>
+</div>
+
+<!-- Partner modal -->
+<div class="hp-modal" id="hpModal">
+  <div class="hp-modal-bg" id="hpModalBg"></div>
+  <div class="hp-modal-content">
+    <button class="hp-modal-close" id="hpModalClose">&times;</button>
+    <img id="hpModalImg" src="" alt="">
+    <div class="hp-modal-name" id="hpModalName"></div>
+  </div>
+</div>  
+<section class="wk" id="mit-keszitunk">
+  <div class="wk-grain"></div>
+  <div class="wk-light wk-light-1"></div>
+  <div class="wk-light wk-light-2"></div>
+  <div class="wk-light wk-light-3"></div>
+
+  <!-- Fejléc -->
+  <div class="wk-head">
+    <div>
+      <div class="wk-label">
+        <div class="wk-label-bar"></div>
+        <span class="wk-label-txt">Teljes kínálat</span>
+      </div>
+      <h2 class="wk-h1">
+        Termék<br>
+        <span class="hi">kategóriáink</span><span class="ho"></span>
+      </h2>
+    </div>
+    <div class="wk-head-r">
+      <p class="wk-head-sub">Az alapanyaggyártástól a kész termékig – négy kategória, egyetlen megbízható forrásból. Saját termesztés, saját labor, saját szállítás.</p>
+      <div class="wk-stats">
+        <div class="wk-stat">
+          <div class="wk-stat-n">4</div>
+          <div class="wk-stat-l">Kategória</div>
+        </div>
+        <div class="wk-stat">
+          <div class="wk-stat-n">30<sup>+</sup></div>
+          <div class="wk-stat-l">Év tapasztalat</div>
+        </div>
+        <div class="wk-stat">
+          <div class="wk-stat-n">45k</div>
+          <div class="wk-stat-l">m² termesztés</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 kártya grid -->
+  <div class="wk-grid">
+
+    <!-- ① FRISS GOMBA ─────────────────────────── -->
+    <div class="wk-card wk-c1" style="--delay:.05s">
+      <img class="wk-c1-img" src="assets/img/csiperke.jpg" alt="Friss gomba">
+      <div class="wk-c1-grad"></div>
+
+      <div class="wk-chips">
+        <div class="wk-chip ch-g">Vákuumhűtés</div>
+        <div class="wk-chip ch-w">Napi szállítás</div>
+        <div class="wk-chip ch-r">IFS minősített</div>
+      </div>
+
+      <div class="wk-body">
+        <div class="wk-tag tag-g">Friss</div>
+        <h3 class="wk-name wk-name-lg">Friss Gomba</h3>
+        <div class="wk-sizes">
+          <div class="wk-sz on">250g</div>
+          <div class="wk-sz">500g</div>
+          <div class="wk-sz">1 kg</div>
+          <div class="wk-sz">3 kg</div>
+          <div class="wk-sz">Bulk</div>
+        </div>
+        <p class="wk-desc">Fehér és barna csiperke, laska, portobello, shiitake, shimeji – 45 000 m²-en termesztve, szedés után 1 órán belül vákuumhűtve, saját flottával szállítva.</p>
+        <a href="#termekek" class="wk-cta wk-cta-g">
+          Termékeink
+          <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ② GOMBAKONZERV ────────────────────────── -->
+    <div class="wk-card wk-c2" style="--delay:.2s">
+      <img class="wk-c2-img" src="assets/img/konzerv.jpg" alt="Gombakonzerv">
+      <div class="wk-c2-grad"></div>
+      
+      <div class="wk-rings-wrap">
+        <div class="wk-ring"></div>
+        <div class="wk-ring"></div>
+        <div class="wk-ring"></div>
+        <div class="wk-ring"></div>
+        <div class="wk-ring"></div>
+      </div>
+      <div class="wk-big-icon"></div>
+
+      <div class="wk-body">
+        <div class="wk-tag tag-r">Feldolgozott</div>
+        <h3 class="wk-name wk-name-md">Gomba­konzerv</h3>
+        <div class="wk-usps">
+          <div class="wk-usp"><div class="wk-dot dr"></div>Tartósítószer nélkül</div>
+          <div class="wk-usp"><div class="wk-dot dr"></div>120 g – 2,2 kg kiszerelés</div>
+          <div class="wk-usp"><div class="wk-dot dr"></div>Egész · Szeletelt · Aprított</div>
+          <div class="wk-usp"><div class="wk-dot dr"></div>Retail, HoReCa, feldolgozóipar</div>
+        </div>
+        <a href="#kapcsolat" class="wk-cta wk-cta-r">
+          Érdeklődjön
+          <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ③ GOMBAKOMPOSZT ──────────────────────── -->
+    <div class="wk-card wk-c3" style="--delay:.35s">
+      <img class="wk-c3-img" src="assets/img/komposzt.jpg" alt="Gombakomposzt">
+      <div class="wk-c3-grad"></div>
+      
+      <div class="wk-c3-grid"></div>
+      <div class="wk-wave wk-wave-1"></div>
+      <div class="wk-wave wk-wave-2"></div>
+
+      <div class="wk-phases">
+        <div class="wk-ph">
+          <div class="wk-ph-bub pb1">I</div>
+          <span class="wk-ph-lbl">Phase</span>
+        </div>
+        <div class="wk-ph">
+          <div class="wk-ph-bub pb2">II</div>
+          <span class="wk-ph-lbl">Phase</span>
+        </div>
+        <div class="wk-ph">
+          <div class="wk-ph-bub pb3">III</div>
+          <span class="wk-ph-lbl">Phase</span>
+        </div>
+      </div>
+
+      <div class="wk-body">
+        <div>
+          <div class="wk-tag tag-y">Phase III</div>
+          <h3 class="wk-name wk-name-md">Gomba­komposzt</h3>
+          <div class="wk-usps">
+            <div class="wk-usp"><div class="wk-dot dg"></div>Saját Phase III komposztüzem</div>
+            <div class="wk-usp"><div class="wk-dot dg"></div>Közép-Európa legmodernebb telephelyei között</div>
+            <div class="wk-usp"><div class="wk-dot dg"></div>EU export partnerek</div>
+          </div>
+          <a href="#kapcsolat" class="wk-cta wk-cta-y">
+            Érdeklődjön
+            <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="wk-c3-stats">
+          <div class="wk-st"><div class="wk-st-v">3</div><div class="wk-st-l">Fázis</div></div>
+          <div class="wk-st"><div class="wk-st-v">EU</div><div class="wk-st-l">Export</div></div>
+          <div class="wk-st"><div class="wk-st-v">100%</div><div class="wk-st-l">Saját</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ④ GOMBACSÍRA ─────────────────────────── -->
+    <div class="wk-card wk-c4" style="--delay:.5s">
+      <img class="wk-c4-img" src="assets/img/csira.jpg" alt="Gombacsíra">
+      <div class="wk-c4-grad"></div>
+      
+      <div class="wk-hex-bg">
+        <!-- Hexagon SVG pattern -->
+        <svg class="wk-hex-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="hexp" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+              <polygon points="30,2 56,16 56,44 30,58 4,44 4,16"
+                       fill="none" stroke="rgba(80,140,220,1)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hexp)"/>
+        </svg>
+      </div>
+      <div class="wk-scan"></div>
+
+      <!-- Forgó hexagon -->
+      <svg class="wk-hex-ring" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="70,4 132,38 132,106 70,140 8,106 8,38"
+                 stroke="rgba(80,140,220,.6)" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
+        <polygon points="70,16 120,44 120,100 70,128 20,100 20,44"
+                 stroke="rgba(80,140,220,.3)" stroke-width="1" fill="none"/>
+        <circle cx="70" cy="4"   r="4" fill="rgba(80,140,220,.7)"/>
+        <circle cx="132" cy="38" r="4" fill="rgba(80,140,220,.7)"/>
+        <circle cx="132" cy="106" r="4" fill="rgba(80,140,220,.7)"/>
+        <circle cx="70" cy="140" r="4" fill="rgba(80,140,220,.7)"/>
+        <circle cx="8" cy="106" r="4" fill="rgba(80,140,220,.7)"/>
+        <circle cx="8" cy="38"  r="4" fill="rgba(80,140,220,.7)"/>
+      </svg>
+
+      <div class="wk-lab-icon"></div>
+
+      <div class="wk-body">
+        <div class="wk-tag tag-b">Laboratórium</div>
+        <h3 class="wk-name wk-name-md">Gomba­csíra</h3>
+        <div class="wk-badges">
+          <div class="wk-badge">Mo. egyetlen ipari gyára</div>
+          <div class="wk-badge">Hibrid fajták</div>
+          <div class="wk-badge">Steril labor</div>
+          <div class="wk-badge">EU export</div>
+        </div>
+        <div class="wk-usps">
+          <div class="wk-usp"><div class="wk-dot db"></div>Mikrobiológiai & mikológiai háttér</div>
+          <div class="wk-usp"><div class="wk-dot db"></div>Kísérleti fermentációs kapacitás</div>
+          <div class="wk-usp"><div class="wk-dot db"></div>5 kg – 10 kg kiszerelés, bulk rendelés</div>
+        </div>
+        <a href="#kapcsolat" class="wk-cta wk-cta-b">
+          Érdeklődjön
+          <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /wk-grid -->
+
+  <!-- CTA sáv -->
+  <div class="wk-bottom">
+    <div class="wk-bottom-l">
+      <h4>Részletes terméklista és árajánlat?</h4>
+      <p>Személyre szabott ajánlatot adunk 24 órán belül.</p>
+    </div>
+    <div class="wk-bottom-r">
+      <a href="mailto:info@koronagomba.hu" class="btn-primary">✉️ Ajánlatot kérek</a>
+      <a href="tel:+3636550500" class="btn-secondary">📞 +36 (36) 550 500</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER (mozgó) -->
+<div class="ticker" style="margin-top:24px;margin-bottom:24px">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="ticker-gem"></span>Friss gomba · Napi szállítás</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Csiperke · Laska · Portobello</span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Shiitake · Shimeji</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>30 éve a piacon</span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Tartósítószer nélkül</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Saját szállítóflotta</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>EU export · IFS minősített</span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Vákuumhűtős technológia</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Demjén, Heves megye</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Friss gomba · Napi szállítás</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Csiperke · Laska · Portobello</span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Shiitake · Shimeji</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>30 éve a piacon</span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Tartósítószer nélkül</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Saját szállítóflotta</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>EU export · IFS minősített</span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Vákuumhűtős technológia</span>
+    <span class="ticker-item"><span class="ticker-gem"></span>Demjén, Heves megye</span>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════ ABOUT ════ -->
+<section class="section" id="rolunk">
+  <div class="about-inner">
+    <div class="about-image-stack reveal">
+      <div class="about-img-bg">
+        <img src="assets/img/friss.jpg" alt="Friss gombák">
+      </div>
+      <div class="about-img-sm">
+        <img src="assets/img/shiita.jpg" alt="Shiitake gombák">
+      </div>
+      <div class="about-badge-card">
+        <div class="big">30<span style="font-size:22px;font-family:'Plus Jakarta Sans'">+</span></div>
+        <div class="lbl">Év tapasztalat</div>
+      </div>
+      <div class="about-green-pill">
+        <span class="pill-icon">🌱</span>
+        <span class="pill-text">Tartósítószer nélkül</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label reveal">
+        <div class="section-label-dot"></div>
+        <span>Történetünk</span>
+      </div>
+      <h2 class="section-title reveal reveal-d1">Három évtized<br>a gomba <span class="italic red">szenvedélye.</span></h2>
+      <p class="section-sub reveal reveal-d2">A Korona Gombaipari Egyesülés <strong>családi vállalkozások összefogásával</strong>, a tradíciók és elhivatottság megőrzése mellett, a legmodernebb technológiák bevonásával vált mára Közép-Európa egyik vezető gombaipari csoportosulásává.</p>
+      <p class="section-sub reveal reveal-d3" style="margin-top:16px">Az alapanyaggyártástól kezdve a gombatermesztésen át a tartósított termékeinkig <strong>minden folyamatot gondosan ellenőrzünk</strong> – a legjobb tanúsító intézetek felügyeletével.</p>
+
+      <div class="about-milestones">
+        <div class="milestone reveal reveal-d1">
+          <div class="milestone-year">1990-es évek</div>
+          <div class="milestone-text">Alapítás – Demjén, Heves megye. Első holland típusú gombaházak megépítése.</div>
+        </div>
+        <div class="milestone reveal reveal-d2">
+          <div class="milestone-year">2000-es évek</div>
+          <div class="milestone-text">45.000 m² termesztőfelület, ~100 automatizált gombaház, saját flotta.</div>
+        </div>
+        <div class="milestone reveal reveal-d3">
+          <div class="milestone-year">2010-es évek</div>
+          <div class="milestone-text">Első hazai ipari gombacsíra-laboratórium, Phase III komposztüzem.</div>
+        </div>
+        <div class="milestone reveal reveal-d4">
+          <div class="milestone-year">Ma</div>
+          <div class="milestone-text">EU export, IFS & HACCP minősítés, folyamatos technológiai fejlesztés.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ FEATURES ═══ -->
+<div class="features-bg" id="miert-mi" style="margin-bottom:24px">
+  <div class="features-inner">
+    <div class="features-header">
+      <div>
+        <div class="section-label reveal">
+          <div class="section-label-dot"></div>
+          <span>Előnyeink</span>
+        </div>
+        <h2 class="section-title reveal reveal-d1">Miért válasszon<br><span class="italic" style="color:#7BC67B">minket?</span></h2>
+      </div>
+      <p class="section-sub reveal reveal-d2">Teljes vertikum, saját technológia, közvetlen minőségellenőrzés – a termelőtől a vásárlóig.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feat-num">01</div>
+        <div class="feat-icon">🌡️</div>
+        <div class="feat-title">Vákuumhűtős frissesség</div>
+        <p class="feat-text">Szedés után legfeljebb 1 órán belül befejezzük a termékek hűtését – ez garantálja a páratlan frissességet és hosszabb eltarthatóságot.</p>
+      </div>
+      <div class="feature-card reveal reveal-d1">
+        <div class="feat-num">02</div>
+        <div class="feat-icon">🚛</div>
+        <div class="feat-title">Saját szállítóflotta</div>
+        <p class="feat-text">Osztályozás és csomagolás után saját hűtős gépjárműveinkkel szállítjuk termékeinket – közvetítő nélkül, biztonságosan.</p>
+      </div>
+      <div class="feature-card red-feature reveal reveal-d2">
+        <div class="feat-num">03</div>
+        <div class="feat-icon">🔬</div>
+        <div class="feat-title">Saját laboratórium</div>
+        <p class="feat-text">Magyarország egyetlen ipari gombacsíra-laboratóriuma – mikrobiológiai, mikológiai és kísérleti fermentációs háttérrel.</p>
+      </div>
+      <div class="feature-card reveal reveal-d1">
+        <div class="feat-num">04</div>
+        <div class="feat-icon">🌱</div>
+        <div class="feat-title">Tartósítószer nélkül</div>
+        <p class="feat-text">Konzervtermékeink kíméletes hőkezeléssel, tartósítószer nélkül készülnek – megőrizve a gombák ásványi és vitamin tartalmát.</p>
+      </div>
+      <div class="feature-card reveal reveal-d2">
+        <div class="feat-num">05</div>
+        <div class="feat-icon">🏆</div>
+        <div class="feat-title">Minősített minőség</div>
+        <p class="feat-text">A legnagyobb tanúsító intézetek rendszeres ellenőrzése mellett termesztünk és gyártunk – HACCP, IFS és BRC szabványok szerint.</p>
+      </div>
+      <div class="feature-card red-feature reveal reveal-d3">
+        <div class="feat-num">06</div>
+        <div class="feat-icon">🌍</div>
+        <div class="feat-title">EU export tapasztalat</div>
+        <p class="feat-text">Termékeinket nemcsak a magyar piacon, hanem számos európai országban is értékesítjük – megbízható partnerként, évtizedes tapasztalattal.</p>
+      </div>
+    </div>
+
+    <!-- Cert badges -->
+    <div class="certs-row">
+      <div class="cert-badge reveal reveal-d1">
+        <span class="cert-icon">✅</span>
+        <span class="cert-name">IFS Food</span>
+      </div>
+      <div class="cert-badge reveal reveal-d2">
+        <span class="cert-icon">✅</span>
+        <span class="cert-name">HACCP</span>
+      </div>
+      <div class="cert-badge reveal reveal-d3">
+        <span class="cert-icon">✅</span>
+        <span class="cert-name">BRC Global</span>
+      </div>
+      <div class="cert-badge reveal reveal-d4">
+        <span class="cert-icon">✅</span>
+        <span class="cert-name">EU Export</span>
+      </div>
+      <div class="cert-badge reveal reveal-d5">
+        <span class="cert-icon">✅</span>
+        <span class="cert-name">ISO 22000</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ PROCESS ═══ -->
+<section class="section" id="folyamat">
+  <div class="process-header">
+    <div class="section-label reveal">
+      <div class="section-label-dot"></div>
+      <span>Hogyan dolgozunk</span>
+    </div>
+    <h2 class="section-title reveal reveal-d1">A termelőtől <span class="italic">az asztalodra.</span></h2>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-bubble" data-num="1">🌾</div>
+      <div class="step-title">Komposzt­gyártás</div>
+      <p class="step-text">Saját Phase III komposztüzem – Közép-Európa egyik legmodernebb telephelye.</p>
+    </div>
+    <div class="process-step reveal reveal-d1">
+      <div class="step-bubble" data-num="2">🔬</div>
+      <div class="step-title">Csíra­oltás</div>
+      <p class="step-text">Steril laborban, saját gombacsírával – hibrid fajtákkal a legjobb hozamért.</p>
+    </div>
+    <div class="process-step reveal reveal-d2">
+      <div class="step-bubble" data-num="3">🏠</div>
+      <div class="step-title">Termesztés</div>
+      <p class="step-text">~100 automatizált gombaházban, 45.000 m²-en, képzett szakemberek felügyeletével.</p>
+    </div>
+    <div class="process-step reveal reveal-d3">
+      <div class="step-bubble" data-num="4">❄️</div>
+      <div class="step-title">Hűtés & Csomagolás</div>
+      <p class="step-text">Vákuumhűtők, nagyteljesítményű osztályozó sorok – 1 órán belül hűtve.</p>
+    </div>
+    <div class="process-step reveal reveal-d4">
+      <div class="step-bubble" data-num="5">🚛</div>
+      <div class="step-title">Szállítás</div>
+      <p class="step-text">Saját hűtős flottával, közvetlenül a partnerekhez – minden nap frissen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════ WHY / IMG ═══ -->
+<div class="why-section" id="kapcsolat">
+  <div class="why-left">
+    <div class="section-label">
+      <div class="section-label-dot"></div>
+      <span>Kinek dolgozunk</span>
+    </div>
+    <h2 class="section-title">Retail, HoReCa,<br><span class="italic" style="color:#7BC67B">és export.</span></h2>
+    <p class="section-sub" style="color:rgba(255,255,255,.55);margin-bottom:32px">Megbízható gombabeszállítót keres? Lépjen kapcsolatba velünk, és közösen kialakítjuk az Önre szabott megoldást.</p>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px">
+      <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:14px;font-weight:500">
+        <span style="width:24px;height:24px;background:rgba(46,139,46,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
+        Kiskereskedelem & szupermarketek
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:14px;font-weight:500">
+        <span style="width:24px;height:24px;background:rgba(46,139,46,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
+        Éttermek, szállodák, catering
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:14px;font-weight:500">
+        <span style="width:24px;height:24px;background:rgba(185,40,40,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
+        Feldolgozóipari partnerek
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:14px;font-weight:500">
+        <span style="width:24px;height:24px;background:rgba(185,40,40,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
+        EU export – több ország
+      </div>
+    </div>
+    <a href="mailto:info@koronagomba.hu" class="btn-primary" style="width:fit-content">Írjon nekünk →</a>
+  </div>
+  <div class="why-img-grid">
+    <div class="why-img-cell tall">
+      <img src="assets/img/porto.jpg" alt="Portobello">
+    </div>
+    <div class="why-img-cell">
+      <img src="assets/img/laska.jpg" alt="Laska">
+    </div>
+    <div class="why-img-cell">
+      <img src="assets/img/shimeji.jpg" alt="Shimeji">
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ TESTIMONIALS ════ -->
+<section class="testimonial-section">
+  <div class="test-header">
+    <div class="section-label reveal">
+      <div class="section-label-dot"></div>
+      <span>Partnereink mondják</span>
+    </div>
+    <h2 class="section-title reveal reveal-d1">Akik <span class="italic">bíznak</span> bennünk.</h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-stars">⭐⭐⭐⭐⭐</div>
+      <p class="test-text">„A Korona Gomba megbízható, precíz partner. Mindig friss áru, pontos szállítás – évek óta együtt dolgozunk, és soha nem volt problémánk."</p>
+      <div class="test-author">
+        <div class="test-avatar">R</div>
+        <div>
+          <div class="test-name">Retail Partner</div>
+          <div class="test-role">Nagyobb szupermarket lánc, Budapest</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card featured reveal reveal-d1">
+      <div class="test-stars">⭐⭐⭐⭐⭐</div>
+      <p class="test-text">„Éttermi konyhánk alapanyagainak jelentős részét tőlük szerezzük be. A shiitake és portobello minősége verhetetlen – vendégeink imádják."</p>
+      <div class="test-author">
+        <div class="test-avatar" style="background:linear-gradient(135deg,var(--r2),var(--r3))">É</div>
+        <div>
+          <div class="test-name">Éttermi Partner</div>
+          <div class="test-role">Fine dining étterem, Eger</div>
+        </div>
+      </div>
+    </div>
+    <div class="test-card reveal reveal-d2">
+      <div class="test-stars">⭐⭐⭐⭐⭐</div>
+      <p class="test-text">„A gombacsíra minősége és a laborháttér lenyűgöző. Importból visszaállítottunk hazai forrásra – jobb minőség, rövidebb szállítási lánc."</p>
+      <div class="test-author">
+        <div class="test-avatar" style="background:linear-gradient(135deg,var(--r1),var(--r2))">F</div>
+        <div>
+          <div class="test-name">Feldolgozóipari Partner</div>
+          <div class="test-role">Gombatermesztő vállalkozás, EU</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════ CTA ════ -->
+<div class="cta-wrap" style="margin-bottom:24px">
+  <div class="cta-eyebrow">🤝 Együttműködés</div>
+  <h2 class="cta-title">Legyünk<br><em>partnerei</em><br>egymásnak.</h2>
+  <p class="cta-sub">Megbízható gombabeszállítót keres? Érdeklődik gombacsíra vagy gombakomposzt iránt? Írjon nekünk – 24 órán belül válaszolunk.</p>
+  <div class="cta-btns">
+    <a href="mailto:info@koronagomba.hu" class="btn-white">✉️ Kapcsolatfelvétel</a>
+    <a href="tel:+3636550500" class="btn-ghost-white">📞 +36 (36) 550 500</a>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter" style="margin-bottom:24px">
+  <div class="newsletter-left">
+    <h3>Hírek & Újdonságok</h3>
+    <p>Értesüljön elsőként a szezonális termékekről és aktualitásokról.</p>
+  </div>
+  <form class="newsletter-form" id="nlForm">
+    <input type="email" class="newsletter-input" placeholder="Email cím..." required>
+    <button type="submit" class="newsletter-btn">Feliratkozás</button>
+  </form>
+</div>
+
+<!-- ══════════════════════════════════ FOOTER ════ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a href="index.html" class="footer-logo-wrap">
+        <img src="assets/img/logo.png" alt="Korona Gomba logó">
+        <div class="nav-logo-text">
+          <span class="brand">Korona Gomba</span>
+          <span class="sub">Gombaipari Egyesülés</span>
+        </div>
+      </a>
+      <p class="footer-tagline">Közép-Európa egyik vezető gombaipari csoportosulása. Gombatermesztés, kereskedelem, feldolgozás – egy kézből, 30 éve.</p>
+      <div class="footer-contact">
+        Magyar Gomba Kertész Kft.<br>
+        3395 Demjén, 0173/7/A/1<br>
+        <a href="tel:+3636550500">+36 (36) 550 500</a><br>
+        <a href="mailto:info@koronagomba.hu">info@koronagomba.hu</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Termékeink</h4>
+      <ul>
+        <li><a href="friss-gomba.html">Friss gomba</a></li>
+        <li><a href="gombakonzerv.html">Gombakonzerv</a></li>
+        <li><a href="gombacsira.html">Gombacsíra</a></li>
+        <li><a href="gombakomposzt.html">Gombakomposzt</a></li>
+        <li><a href="termekek.html">Terméklisták</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Szegmensek</h4>
+      <ul>
+        <li><a href="partnerek.html">Retail</a></li>
+        <li><a href="partnerek.html">HoReCa</a></li>
+        <li><a href="partnerek.html">Feldolgozóipar</a></li>
+        <li><a href="partnerek.html">Gombatermesztők</a></li>
+        <li><a href="partnerek.html">Export partnerek</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Információk</h4>
+      <ul>
+        <li><a href="rolunk.html">Rólunk</a></li>
+        <li><a href="miert-mi.html">Minőségbiztosítás</a></li>
+        <li><a href="miert-mi.html#folyamat">Folyamatunk</a></li>
+        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        <li><a href="#">Adatvédelem</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Korona Gombaipari Egyesülés · Minden jog fenntartva</div>
+    <div class="footer-social">
+      <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(255,255,255,.6)"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <a href="https://linkedin.com" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://instagram.com" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="rgba(255,255,255,.6)" stroke="none"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+// Hero partner modal
+(function(){
+  const modal = document.getElementById('hpModal');
+  const modalImg = document.getElementById('hpModalImg');
+  const modalName = document.getElementById('hpModalName');
+  const modalBg = document.getElementById('hpModalBg');
+  const modalClose = document.getElementById('hpModalClose');
+
+  document.querySelectorAll('.hp-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      modalImg.src = img.src;
+      modalName.textContent = card.dataset.name;
+      modal.classList.add('active');
+    });
+  });
+
+  [modalBg, modalClose].forEach(el => {
+    el.addEventListener('click', () => modal.classList.remove('active'));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') modal.classList.remove('active');
+  });
+})();
+</script>
+</body>
+</html>

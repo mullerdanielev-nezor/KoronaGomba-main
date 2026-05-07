@@ -102,7 +102,6 @@
 }
 
 /* ═══ TERMÉKKÁRTYA HOVER EFFEKT ═══ */
-/* Alap: wk-body a kártya aljára csúszik, csak tag+név látszik */
 .wk-card {
   overflow: hidden;
 }
@@ -111,16 +110,13 @@
   transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Kártya-specifikus eltolás alapállapotban (lefelé) */
 .wk-c1 .wk-body { transform: translateY(calc(100% - 160px)); }
 .wk-c2 .wk-body { transform: translateY(calc(100% - 150px)); }
 .wk-c3 .wk-body { transform: translateY(calc(100% - 150px)); }
 .wk-c4 .wk-body { transform: translateY(calc(100% - 150px)); }
 
-/* Hover: visszamegy eredeti pozícióra */
 .wk-card:hover .wk-body { transform: translateY(0); }
 
-/* Dekoratív elemek fade ki alapban, fade be hoverre */
 .wk-card .wk-chips,
 .wk-card .wk-phases,
 .wk-card .wk-c3-stats,
@@ -147,7 +143,6 @@
   opacity: 1;
 }
 
-/* Alul lévő adatok (desc, usps, sizes, cta) elrejtése alapban */
 .wk-card .wk-desc,
 .wk-card .wk-usps,
 .wk-card .wk-sizes,
@@ -161,6 +156,7 @@
 .wk-card:hover .wk-cta {
   opacity: 1;
 }
+
 /* ═══ STATIKUS TICKER SÁV ═══ */
 .ticker-static .ticker-inner-static {
   animation: none !important;
@@ -178,13 +174,14 @@
 /* ═══ HERO PARTNER SZALAG ═══ */
 .hero-partners {
   overflow: hidden;
-  padding: 32px 0 20px;
+  padding: 120px 0 120px;
+  margin-top: 12px;
   margin-bottom: 0;
   position: relative;
 }
 .hero-partners-label {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 .hero-partners-label h3 {
   font-family: 'Fraunces', serif;
@@ -304,6 +301,15 @@
   color: #666;
   line-height: 1;
 }
+
+/* ═══ PARTNEREK TÉRKÖZ – "Kinek dolgozunk" szekció ═══ */
+.why-section {
+  padding: 72px 48px;
+  gap: 56px;
+}
+
+/* Rólunk szekció – rés csökkentése a termékkártyák után */
+#rolunk { padding-top: 0 !important; }
 </style>
 </head>
 <body>
@@ -373,10 +379,8 @@
 
 <!-- ═══════════════════════════════════════ HERO ═══ -->
 <section class="hero hero-video">
-  <!-- Fullwidth video background -->
   <div class="hero-video-bg">
     <video autoplay muted loop playsinline id="heroVideo">
-      <!-- Később ide kerül a videó forrás, pl: -->
       <!-- <source src="assets/video/hero.mp4" type="video/mp4"> -->
     </video>
     <div class="hero-video-overlay"></div>
@@ -519,7 +523,7 @@
   <!-- 4 kártya grid -->
   <div class="wk-grid">
 
-    <!-- ① FRISS GOMBA ─────────────────────────── -->
+    <!-- ① FRISS GOMBA -->
     <div class="wk-card wk-c1" style="--delay:.05s">
       <img class="wk-c1-img" src="assets/img/csiperke.jpg" alt="Friss gomba">
       <div class="wk-c1-grad"></div>
@@ -548,7 +552,7 @@
       </div>
     </div>
 
-    <!-- ② GOMBAKONZERV ────────────────────────── -->
+    <!-- ② GOMBAKONZERV -->
     <div class="wk-card wk-c2" style="--delay:.2s">
       <img class="wk-c2-img" src="assets/img/konzerv.jpg" alt="Gombakonzerv">
       <div class="wk-c2-grad"></div>
@@ -578,7 +582,7 @@
       </div>
     </div>
 
-    <!-- ③ GOMBAKOMPOSZT ──────────────────────── -->
+    <!-- ③ GOMBAKOMPOSZT -->
     <div class="wk-card wk-c3" style="--delay:.35s">
       <img class="wk-c3-img" src="assets/img/komposzt.jpg" alt="Gombakomposzt">
       <div class="wk-c3-grad"></div>
@@ -624,13 +628,12 @@
       </div>
     </div>
 
-    <!-- ④ GOMBACSÍRA ─────────────────────────── -->
+    <!-- ④ GOMBACSÍRA -->
     <div class="wk-card wk-c4" style="--delay:.5s">
       <img class="wk-c4-img" src="assets/img/csira.jpg" alt="Gombacsíra">
       <div class="wk-c4-grad"></div>
       
       <div class="wk-hex-bg">
-        <!-- Hexagon SVG pattern -->
         <svg class="wk-hex-svg" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="hexp" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
@@ -643,7 +646,6 @@
       </div>
       <div class="wk-scan"></div>
 
-      <!-- Forgó hexagon -->
       <svg class="wk-hex-ring" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
         <polygon points="70,4 132,38 132,106 70,140 8,106 8,38"
                  stroke="rgba(80,140,220,.6)" stroke-width="1.5" fill="none" stroke-dasharray="6 4"/>
@@ -695,31 +697,6 @@
   </div>
 </section>
 
-<!-- TICKER (mozgó) -->
-<div class="ticker" style="margin-top:24px;margin-bottom:24px">
-  <div class="ticker-inner">
-    <span class="ticker-item"><span class="ticker-gem"></span>Friss gomba · Napi szállítás</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Csiperke · Laska · Portobello</span>
-    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Shiitake · Shimeji</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>30 éve a piacon</span>
-    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Tartósítószer nélkül</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Saját szállítóflotta</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>EU export · IFS minősített</span>
-    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Vákuumhűtős technológia</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Demjén, Heves megye</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Friss gomba · Napi szállítás</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Csiperke · Laska · Portobello</span>
-    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Shiitake · Shimeji</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>30 éve a piacon</span>
-    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Tartósítószer nélkül</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Saját szállítóflotta</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>EU export · IFS minősített</span>
-    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Vákuumhűtős technológia</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Demjén, Heves megye</span>
-  </div>
-</div>
-
-
 <!-- ════════════════════════════════════ ABOUT ════ -->
 <section class="section" id="rolunk">
   <div class="about-inner">
@@ -743,33 +720,164 @@
     <div>
       <div class="section-label reveal">
         <div class="section-label-dot"></div>
-        <span>Történetünk</span>
+        <span>Rólunk</span>
       </div>
       <h2 class="section-title reveal reveal-d1">Három évtized<br>a gomba <span class="italic red">szenvedélye.</span></h2>
-      <p class="section-sub reveal reveal-d2">A Korona Gombaipari Egyesülés <strong>családi vállalkozások összefogásával</strong>, a tradíciók és elhivatottság megőrzése mellett, a legmodernebb technológiák bevonásával vált mára Közép-Európa egyik vezető gombaipari csoportosulásává.</p>
-      <p class="section-sub reveal reveal-d3" style="margin-top:16px">Az alapanyaggyártástól kezdve a gombatermesztésen át a tartósított termékeinkig <strong>minden folyamatot gondosan ellenőrzünk</strong> – a legjobb tanúsító intézetek felügyeletével.</p>
+      <p class="section-sub reveal reveal-d2">A Korona Gombaipari Egyesülést <strong>családi vállalkozások hozták létre</strong> azért, hogy a hagyományokra építve, de a legmodernebb technológiákat alkalmazva közösen fejlődjenek. Ennek köszönhetően mára Közép-Európa egyik meghatározó gombaipari szereplőjévé váltunk.</p>
+      <p class="section-sub reveal reveal-d3" style="margin-top:16px">A teljes gombatermesztési folyamatot lefedjük: a szaporítóanyag előállításától és a komposztgyártástól kezdve a magas színvonalú termesztésen át a feldolgozásig – így <strong>garantáljuk a folyamatos, megbízható minőséget</strong>.</p>
 
-      <div class="about-milestones">
-        <div class="milestone reveal reveal-d1">
-          <div class="milestone-year">1990-es évek</div>
-          <div class="milestone-text">Alapítás – Demjén, Heves megye. Első holland típusú gombaházak megépítése.</div>
+      <!-- Bővebben collapse -->
+      <div id="aboutMore" style="max-height:0;overflow:hidden;transition:max-height 0.5s ease">
+        <p class="section-sub" style="margin-top:16px">Több száz kollégánkkal és elsősorban hazai partnereinkkel nap mint nap azon dolgozunk, hogy termékeink frissen, kiváló minőségben jussanak el a magyar és nemzetközi piacokra. <strong>Folyamatosan fejlődünk</strong>: növeljük hatékonyságunkat, új technológiákat vezetünk be, és kiemelt figyelmet fordítunk a kutatás-fejlesztésre.</p>
+        <p class="section-sub" style="margin-top:16px">Célunk, hogy partnereinket mindig a lehető legmagasabb színvonalon, megbízhatóan szolgáljuk ki. Elhivatottak vagyunk abban, hogy minden egyes nap friss, biztonságos és kiváló minőségű élelmiszer kerüljön vásárlóink asztalára – mert hisszük, hogy <strong>a minőség nem kompromisszum kérdése, hanem felelősség</strong>.</p>
+        <p class="section-sub" style="margin-top:16px"><em>Szenvedélyünk a gomba, és ezt a szenvedélyt visszük bele minden egyes nap a munkánkba.</em></p>
+      </div>
+      <button onclick="let el=document.getElementById('aboutMore');let open=el.style.maxHeight!=='0px';el.style.maxHeight=open?'0px':'600px';this.textContent=open?'Bővebben ↓':'Kevesebb ↑'" style="margin-top:16px;background:none;border:1px solid rgba(46,139,46,.4);color:var(--g3,#2e5a2e);font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;padding:8px 20px;border-radius:40px;cursor:pointer;transition:all .3s ease" onmouseover="this.style.background='rgba(46,139,46,.1)'" onmouseout="this.style.background='none'">Bővebben ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CÉGTÖRTÉNET ═══ -->
+<section class="section" id="cegtortenet" style="padding-top:0;padding-bottom:24px;margin-top:-40px">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+    <div class="section-label reveal" style="justify-content:center;display:flex;width:fit-content;margin:0 auto">
+      <div class="section-label-dot"></div>
+      <span>Cégtörténetünk</span>
+    </div>
+    <h2 class="section-title reveal reveal-d1" style="text-align:center;font-size:clamp(42px,6vw,72px);margin-top:12px">Az út, amit <span class="italic red">bejártunk.</span></h2>
+
+    <style>
+    /* TIMELINE V2 – animated spine + circle images */
+    .tl2{position:relative;padding:20px 0;margin-top:24px}
+    /* Spine line – grows on scroll, behind everything */
+    .tl2::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:3px;background:rgba(0,0,0,.08);transform:translateX(-50%);z-index:0}
+    .tl2-line{position:absolute;left:50%;top:0;width:3px;height:0;background:linear-gradient(180deg,var(--g3,#2e5a2e),var(--r2,#b92828));transform:translateX(-50%);transition:height .1s linear;z-index:0;border-radius:3px}
+
+    .tl2-item{position:relative;display:flex;align-items:center;padding:0 0 32px;opacity:0;transition:opacity .6s ease,transform .6s ease}
+    .tl2-item.tl2-visible{opacity:1;transform:translateX(0)!important}
+
+    /* Odd = image left, text right */
+    .tl2-item:nth-child(odd){flex-direction:row;transform:translateX(-80px)}
+    .tl2-item:nth-child(odd) .tl2-content{text-align:left;padding-left:56px}
+    .tl2-item:nth-child(odd) .tl2-img-wrap{margin-left:auto;margin-right:calc(50% - 160px)}
+
+    /* Even = image right, text left */
+    .tl2-item:nth-child(even){flex-direction:row-reverse;transform:translateX(80px)}
+    .tl2-item:nth-child(even) .tl2-content{text-align:right;padding-right:56px}
+    .tl2-item:nth-child(even) .tl2-img-wrap{margin-right:auto;margin-left:calc(50% - 160px)}
+
+    .tl2-img-wrap{width:320px;height:320px;border-radius:50%;overflow:hidden;flex-shrink:0;box-shadow:0 16px 50px rgba(0,0,0,.18);border:5px solid var(--g3,#2e5a2e);position:relative;z-index:2;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease}
+    .tl2-img-wrap:hover{transform:scale(1.06);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+    .tl2-item:nth-child(3) .tl2-img-wrap,.tl2-item:nth-child(4) .tl2-img-wrap{border-color:var(--r2,#b92828)}
+    .tl2-img-wrap img{width:100%;height:100%;object-fit:cover}
+
+    /* Dot on spine */
+    .tl2-dot{position:absolute;left:50%;top:50%;width:22px;height:22px;border-radius:50%;background:var(--bg,#e8e4dc);border:3px solid var(--g3,#2e5a2e);transform:translate(-50%,-50%);z-index:3;transition:background .4s ease,box-shadow .4s ease}
+    .tl2-item:nth-child(3) .tl2-dot,.tl2-item:nth-child(4) .tl2-dot{border-color:var(--r2,#b92828)}
+    .tl2-item.tl2-visible .tl2-dot{background:var(--g3,#2e5a2e);box-shadow:0 0 14px rgba(46,139,46,.5)}
+    .tl2-item:nth-child(3).tl2-visible .tl2-dot,.tl2-item:nth-child(4).tl2-visible .tl2-dot{background:var(--r2,#b92828);box-shadow:0 0 14px rgba(185,40,40,.5)}
+
+    .tl2-content{flex:1;position:relative;z-index:2}
+    .tl2-year{font-family:'Fraunces',serif;font-size:36px;font-weight:700;color:var(--g3,#2e5a2e);margin-bottom:12px}
+    .tl2-item:nth-child(3) .tl2-year,.tl2-item:nth-child(4) .tl2-year{color:var(--r2,#b92828)}
+    .tl2-txt{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;color:var(--txt,#1a1a1a);opacity:.75;line-height:1.8;max-width:400px}
+    .tl2-item:nth-child(odd) .tl2-txt{margin-left:0}
+    .tl2-item:nth-child(even) .tl2-txt{margin-left:auto}
+
+    /* Lightbox */
+    .tl2-lightbox{display:none;position:fixed;inset:0;z-index:99999;align-items:center;justify-content:center;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);cursor:pointer}
+    .tl2-lightbox.active{display:flex}
+    .tl2-lightbox img{max-width:85vw;max-height:85vh;border-radius:20px;box-shadow:0 32px 100px rgba(0,0,0,.4);object-fit:cover}
+
+    @media(max-width:768px){
+      .tl2::before,.tl2-line{left:28px}
+      .tl2-item,.tl2-item:nth-child(odd),.tl2-item:nth-child(even){flex-direction:column!important;transform:translateY(40px)!important;align-items:flex-start;padding-left:64px}
+      .tl2-item.tl2-visible{transform:translateY(0)!important}
+      .tl2-item:nth-child(odd) .tl2-img-wrap,.tl2-item:nth-child(even) .tl2-img-wrap{margin:0 0 20px 0}
+      .tl2-item:nth-child(odd) .tl2-content,.tl2-item:nth-child(even) .tl2-content{text-align:left;padding:0}
+      .tl2-item:nth-child(even) .tl2-txt{margin-left:0}
+      .tl2-img-wrap{width:180px;height:180px}
+      .tl2-dot{left:28px!important}
+    }
+    </style>
+
+    <div class="tl2" id="tl2">
+      <div class="tl2-line" id="tl2Line"></div>
+
+      <div class="tl2-item">
+        <div class="tl2-dot"></div>
+        <div class="tl2-img-wrap"><img src="assets/img/komposzt.jpg" alt="Alapítás"></div>
+        <div class="tl2-content">
+          <div class="tl2-year">1990-es évek</div>
+          <div class="tl2-txt">Alapítás – Demjén, Heves megye. Első holland típusú gombaházak megépítése, családi vállalkozások összefogásával.</div>
         </div>
-        <div class="milestone reveal reveal-d2">
-          <div class="milestone-year">2000-es évek</div>
-          <div class="milestone-text">45.000 m² termesztőfelület, ~100 automatizált gombaház, saját flotta.</div>
+      </div>
+
+      <div class="tl2-item">
+        <div class="tl2-dot"></div>
+        <div class="tl2-img-wrap"><img src="assets/img/friss.jpg" alt="Növekedés"></div>
+        <div class="tl2-content">
+          <div class="tl2-year">2000-es évek</div>
+          <div class="tl2-txt">45.000 m² termesztőfelület, ~100 automatizált gombaház, saját hűtős szállítóflotta kiépítése.</div>
         </div>
-        <div class="milestone reveal reveal-d3">
-          <div class="milestone-year">2010-es évek</div>
-          <div class="milestone-text">Első hazai ipari gombacsíra-laboratórium, Phase III komposztüzem.</div>
+      </div>
+
+      <div class="tl2-item">
+        <div class="tl2-dot"></div>
+        <div class="tl2-img-wrap"><img src="assets/img/csira.jpg" alt="Laboratórium"></div>
+        <div class="tl2-content">
+          <div class="tl2-year">2010-es évek</div>
+          <div class="tl2-txt">Magyarország első ipari gombacsíra-laboratóriuma, Phase III komposztüzem, kutatás-fejlesztési kapacitás.</div>
         </div>
-        <div class="milestone reveal reveal-d4">
-          <div class="milestone-year">Ma</div>
-          <div class="milestone-text">EU export, IFS & HACCP minősítés, folyamatos technológiai fejlesztés.</div>
+      </div>
+
+      <div class="tl2-item">
+        <div class="tl2-dot"></div>
+        <div class="tl2-img-wrap"><img src="assets/img/csiperke.jpg" alt="Jelen"></div>
+        <div class="tl2-content">
+          <div class="tl2-year">Ma</div>
+          <div class="tl2-txt">EU export, IFS & HACCP minősítés, folyamatos technológiai fejlesztés. Közép-Európa egyik meghatározó gombaipari szereplője.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Timeline lightbox -->
+<div class="tl2-lightbox" id="tl2Lb">
+  <img id="tl2LbImg" src="" alt="">
+</div>
+
+<script>
+// Timeline scroll animation + lightbox
+(function(){
+  const tl=document.getElementById('tl2');
+  const line=document.getElementById('tl2Line');
+  const items=tl.querySelectorAll('.tl2-item');
+  const lb=document.getElementById('tl2Lb');
+  const lbImg=document.getElementById('tl2LbImg');
+  function onScroll(){
+    const rect=tl.getBoundingClientRect();
+    const tlTop=rect.top;
+    const tlH=rect.height;
+    const winH=window.innerHeight;
+    const progress=Math.min(Math.max((winH-tlTop)/(tlH+winH*.5),0),1);
+    line.style.height=(progress*100)+'%';
+    items.forEach(item=>{
+      const r=item.getBoundingClientRect();
+      if(r.top<winH*.82)item.classList.add('tl2-visible');
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  // Lightbox
+  tl.querySelectorAll('.tl2-img-wrap').forEach(w=>{
+    w.addEventListener('click',()=>{lbImg.src=w.querySelector('img').src;lb.classList.add('active')});
+  });
+  lb.addEventListener('click',()=>lb.classList.remove('active'));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('active')});
+})();
+</script>
 
 <!-- ══════════════════════════════════ FEATURES ═══ -->
 <div class="features-bg" id="miert-mi" style="margin-bottom:24px">
@@ -897,7 +1005,7 @@
     </div>
     <h2 class="section-title">Retail, HoReCa,<br><span class="italic" style="color:#7BC67B">és export.</span></h2>
     <p class="section-sub" style="color:rgba(255,255,255,.55);margin-bottom:32px">Megbízható gombabeszállítót keres? Lépjen kapcsolatba velünk, és közösen kialakítjuk az Önre szabott megoldást.</p>
-    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px">
+    <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:36px">
       <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:14px;font-weight:500">
         <span style="width:24px;height:24px;background:rgba(46,139,46,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
         Kiskereskedelem & szupermarketek

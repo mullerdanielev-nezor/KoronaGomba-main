@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Korona Gombaipari Egyesülés – Közép-Európa vezető gombaipari csoportosulása. Friss gombák, gombacsíra, gombakomposzt. 30+ év tapasztalat, 45.000 m² termesztőfelület.">
+<meta id="metaDesc" name="description" content="Korona Gombaipari Egyesülés – Közép-Európa vezető gombaipari csoportosulása. Friss gombák, gombacsíra, gombakomposzt. 30+ év tapasztalat, 45.000 m² termesztőfelület.">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Korona Gomba – A természet koronája">
 <meta property="og:description" content="30 éves tapasztalat, 45.000 m² termesztőfelület – minden nap frissen, a legmagasabb minőségben.">
 <meta property="og:image" content="assets/img/hero.jpg">
-<title>Korona Gomba – Közép-Európa vezető gombaipari egyesülése</title>
+<title id="pageTitle">Korona Gomba – Közép-Európa vezető gombaipari egyesülése</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=Italianno&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
 /* ═══ VIDEO HERO OVERRIDE ═══ */
@@ -198,18 +198,6 @@
 
 /* Termékkategóriák feletti hely csökkentés */
 .wk { padding-top: 24px !important; }
-.hero-partners::before,
-.hero-partners::after {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0;
-  width: 80px;
-  z-index: 2;
-  pointer-events: none;
-}
-.hero-partners::before { left: 0; background: linear-gradient(90deg, var(--bg, #e8e4dc), transparent); }
-.hero-partners::after { right: 0; background: linear-gradient(270deg, var(--bg, #e8e4dc), transparent); }
-
 .hero-partners-track {
   display: flex;
   gap: 24px;
@@ -322,11 +310,11 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="termekek.html">Termékek</a>
-  <a href="galeria.html">Galéria</a>
-  <a href="receptek.html">Receptek</a>
-  <a href="kapcsolat.html" class="m-cta">Kontakt →</a>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="termekek.html" data-i18n="nav.products">Termékek</a>
+  <a href="galeria.html" data-i18n="nav.gallery">Galéria</a>
+  <a href="receptek.html" data-i18n="nav.recipes">Receptek</a>
+  <a href="kapcsolat.html" class="m-cta" data-i18n="nav.contact">Kontakt →</a>
 </div>
 
 <!-- NAVBAR -->
@@ -341,36 +329,36 @@
 
   <ul class="nav-links">
     <li class="has-dropdown">
-      <a href="index.html">Home</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
       <ul class="nav-dropdown">
-        <li><a href="rolunk.html">Rólunk</a></li>
-        <li><a href="cegtortenet.html">Cégtörténet</a></li>
-        <li><a href="minosegbiztositas.html">Minőségbiztosítás</a></li>
-        <li><a href="fenntarthato-jovo.html">Fenntartható jövő</a></li>
-        <li><a href="tarsadalmi-felelossegvallalas.html">Társadalmi felelősségvállalás</a></li>
-        <li><a href="karrier.html">Karrier</a></li>
+        <li><a href="rolunk.html" data-i18n="nav.about">Rólunk</a></li>
+        <li><a href="cegtortenet.html" data-i18n="nav.history">Cégtörténet</a></li>
+        <li><a href="minosegbiztositas.html" data-i18n="nav.quality">Minőségbiztosítás</a></li>
+        <li><a href="fenntarthato-jovo.html" data-i18n="nav.sustain">Fenntartható jövő</a></li>
+        <li><a href="tarsadalmi-felelossegvallalas.html" data-i18n="nav.social">Társadalmi felelősségvállalás</a></li>
+        <li><a href="karrier.html" data-i18n="nav.career">Karrier</a></li>
       </ul>
     </li>
     <li class="has-dropdown">
-      <a href="termekek.html">Termékek</a>
+      <a href="termekek.html" data-i18n="nav.products">Termékek</a>
       <ul class="nav-dropdown">
-        <li><a href="gombacsira.html">Gombacsíra</a></li>
-        <li><a href="gombakomposzt.html">Gombakomposzt</a></li>
-        <li><a href="friss-gomba.html">Friss gomba</a></li>
-        <li><a href="gombakonzerv.html">Konzervgomba</a></li>
+        <li><a href="gombacsira.html" data-i18n="nav.spawn">Gombacsíra</a></li>
+        <li><a href="gombakomposzt.html" data-i18n="nav.compost">Gombakomposzt</a></li>
+        <li><a href="friss-gomba.html" data-i18n="nav.fresh">Friss gomba</a></li>
+        <li><a href="gombakonzerv.html" data-i18n="nav.canned">Konzervgomba</a></li>
       </ul>
     </li>
-    <li><a href="galeria.html">Galéria</a></li>
-    <li><a href="receptek.html">Receptek</a></li>
+    <li><a href="galeria.html" data-i18n="nav.gallery">Galéria</a></li>
+    <li><a href="receptek.html" data-i18n="nav.recipes">Receptek</a></li>
   </ul>
 
   <div class="nav-right">
-    <div class="nav-lang">
-      <button class="lang-btn active">HU</button>
-      <button class="lang-btn">EN</button>
-      <button class="lang-btn">DE</button>
+    <div class="nav-lang" id="langSwitch">
+      <button class="lang-btn active" data-lang="hu">HU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
     </div>
-    <a href="kapcsolat.html" class="btn-nav-cta">Kontakt →</a>
+    <a href="kapcsolat.html" class="btn-nav-cta" data-i18n="nav.contact">Kontakt →</a>
     <button class="nav-burger" id="burger" aria-label="Menü">
       <span></span><span></span><span></span>
     </button>
@@ -389,10 +377,10 @@
   <div class="hero-video-content">
     <div class="hero-pill">
       <div class="hero-pill-dot">🍄</div>
-      <span>Közép-Európa vezető gombaipari csoportosulása</span>
+      <span data-i18n="hero.pill">Közép-Európa vezető gombaipari csoportosulása</span>
     </div>
 
-    <h1>
+    <h1 data-i18n-html="hero.title">
       A <span class="italic">természet</span><br>
       <span class="red">koronája</span><br>
       tányérodon.
@@ -400,27 +388,27 @@
 
     <div class="hero-actions">
       <a href="#termekek" class="btn-primary">
-        Termékeink
+        <span data-i18n="hero.btnProducts">Termékeink</span>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <a href="#rolunk" class="btn-secondary">
         <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7.5l2 2L10 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        Rólunk
+        <span data-i18n="hero.btnAbout">Rólunk</span>
       </a>
     </div>
 
     <div class="hero-stats">
       <div class="hero-stat">
         <div class="hero-stat-num">30<sup>+</sup></div>
-        <div class="hero-stat-label">Év tapasztalat</div>
+        <div class="hero-stat-label" data-i18n="hero.statYears">Év tapasztalat</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num">45k</div>
-        <div class="hero-stat-label">M² termesztés</div>
+        <div class="hero-stat-label" data-i18n="hero.statSqm">M² termesztés</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num">100<sup>+</sup></div>
-        <div class="hero-stat-label">Gombaház</div>
+        <div class="hero-stat-label" data-i18n="hero.statHouses">Gombaház</div>
       </div>
     </div>
   </div>
@@ -430,20 +418,20 @@
 <!-- STATIKUS SÁV - Üzemegységek -->
 <div class="ticker ticker-static" style="margin-top:24px">
   <div class="ticker-inner ticker-inner-static">
-    <span class="ticker-item"><span class="ticker-gem"></span>Csíraüzem</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Komposztüzem</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Gombatermesztés</span>
-    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Hűtőház és csomagolóüzem</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Konzervüzem</span>
-    <span class="ticker-item ticker-red"><span class="ticker-gem"></span>Saját gépjárműflotta</span>
-    <span class="ticker-item"><span class="ticker-gem"></span>Minőség</span>
+    <span class="ticker-item"><span class="ticker-gem"></span><span data-i18n="tk.spawn">Csíraüzem</span></span>
+    <span class="ticker-item"><span class="ticker-gem"></span><span data-i18n="tk.compost">Komposztüzem</span></span>
+    <span class="ticker-item"><span class="ticker-gem"></span><span data-i18n="tk.growing">Gombatermesztés</span></span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span><span data-i18n="tk.cooling">Hűtőház és csomagolóüzem</span></span>
+    <span class="ticker-item"><span class="ticker-gem"></span><span data-i18n="tk.canning">Konzervüzem</span></span>
+    <span class="ticker-item ticker-red"><span class="ticker-gem"></span><span data-i18n="tk.fleet">Saját gépjárműflotta</span></span>
+    <span class="ticker-item"><span class="ticker-gem"></span><span data-i18n="tk.quality">Minőség</span></span>
   </div>
 </div>
 
 <!-- HERO PARTNER SZALAG -->
 <div class="hero-partners">
   <div class="hero-partners-label">
-    <h3>Akik <span class="italic">megbíznak</span> bennünk.</h3>
+    <h3 data-i18n-html="partners.label">Akik <span class="italic">megbíznak</span> bennünk.</h3>
   </div>
   <div class="hero-partners-track" id="heroPartnersTrack">
     <div class="hp-card" data-name="Metro"><img src="assets/img/partners/metro.png" alt="Metro"></div>
@@ -494,27 +482,27 @@
     <div>
       <div class="wk-label">
         <div class="wk-label-bar"></div>
-        <span class="wk-label-txt">Teljes kínálat</span>
+        <span class="wk-label-txt" data-i18n="wk.label">Teljes kínálat</span>
       </div>
-      <h2 class="wk-h1">
+      <h2 class="wk-h1" data-i18n-html="wk.h1">
         Termék<br>
         <span class="hi">kategóriáink</span><span class="ho"></span>
       </h2>
     </div>
     <div class="wk-head-r">
-      <p class="wk-head-sub">Az alapanyaggyártástól a kész termékig – négy kategória, egyetlen megbízható forrásból. Saját termesztés, saját labor, saját szállítás.</p>
+      <p class="wk-head-sub" data-i18n="wk.sub">Az alapanyaggyártástól a kész termékig – négy kategória, egyetlen megbízható forrásból. Saját termesztés, saját labor, saját szállítás.</p>
       <div class="wk-stats">
         <div class="wk-stat">
           <div class="wk-stat-n">4</div>
-          <div class="wk-stat-l">Kategória</div>
+          <div class="wk-stat-l" data-i18n="wk.statCat">Kategória</div>
         </div>
         <div class="wk-stat">
           <div class="wk-stat-n">30<sup>+</sup></div>
-          <div class="wk-stat-l">Év tapasztalat</div>
+          <div class="wk-stat-l" data-i18n="wk.statYears">Év tapasztalat</div>
         </div>
         <div class="wk-stat">
           <div class="wk-stat-n">45k</div>
-          <div class="wk-stat-l">m² termesztés</div>
+          <div class="wk-stat-l" data-i18n="wk.statSqm">m² termesztés</div>
         </div>
       </div>
     </div>
@@ -529,24 +517,24 @@
       <div class="wk-c1-grad"></div>
 
       <div class="wk-chips">
-        <div class="wk-chip ch-g">Vákuumhűtés</div>
-        <div class="wk-chip ch-w">Napi szállítás</div>
-        <div class="wk-chip ch-r">IFS minősített</div>
+        <div class="wk-chip ch-g" data-i18n="wk.c1.chip1">Vákuumhűtés</div>
+        <div class="wk-chip ch-w" data-i18n="wk.c1.chip2">Napi szállítás</div>
+        <div class="wk-chip ch-r" data-i18n="wk.c1.chip3">IFS minősített</div>
       </div>
 
       <div class="wk-body">
-        <div class="wk-tag tag-g">Friss</div>
-        <h3 class="wk-name wk-name-lg">Friss Gomba</h3>
+        <div class="wk-tag tag-g" data-i18n="wk.c1.tag">Friss</div>
+        <h3 class="wk-name wk-name-lg" data-i18n="wk.c1.name">Friss Gomba</h3>
         <div class="wk-sizes">
           <div class="wk-sz on">250g</div>
           <div class="wk-sz">500g</div>
           <div class="wk-sz">1 kg</div>
           <div class="wk-sz">3 kg</div>
-          <div class="wk-sz">Bulk</div>
+          <div class="wk-sz" data-i18n="wk.c1.bulk">Bulk</div>
         </div>
-        <p class="wk-desc">Fehér és barna csiperke, laska, portobello, shiitake, shimeji – 45 000 m²-en termesztve, szedés után 1 órán belül vákuumhűtve, saját flottával szállítva.</p>
+        <p class="wk-desc" data-i18n="wk.c1.desc">Fehér és barna csiperke, laska, portobello, shiitake, shimeji – 45 000 m²-en termesztve, szedés után 1 órán belül vákuumhűtve, saját flottával szállítva.</p>
         <a href="#termekek" class="wk-cta wk-cta-g">
-          Termékeink
+          <span data-i18n="wk.cta.products">Termékeink</span>
           <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -567,16 +555,16 @@
       <div class="wk-big-icon"></div>
 
       <div class="wk-body">
-        <div class="wk-tag tag-r">Feldolgozott</div>
-        <h3 class="wk-name wk-name-md">Gomba­konzerv</h3>
+        <div class="wk-tag tag-r" data-i18n="wk.c2.tag">Feldolgozott</div>
+        <h3 class="wk-name wk-name-md" data-i18n="wk.c2.name">Gomba­konzerv</h3>
         <div class="wk-usps">
-          <div class="wk-usp"><div class="wk-dot dr"></div>Tartósítószer nélkül</div>
-          <div class="wk-usp"><div class="wk-dot dr"></div>120 g – 2,2 kg kiszerelés</div>
-          <div class="wk-usp"><div class="wk-dot dr"></div>Egész · Szeletelt · Aprított</div>
-          <div class="wk-usp"><div class="wk-dot dr"></div>Retail, HoReCa, feldolgozóipar</div>
+          <div class="wk-usp"><div class="wk-dot dr"></div><span data-i18n="wk.c2.u1">Tartósítószer nélkül</span></div>
+          <div class="wk-usp"><div class="wk-dot dr"></div><span data-i18n="wk.c2.u2">120 g – 2,2 kg kiszerelés</span></div>
+          <div class="wk-usp"><div class="wk-dot dr"></div><span data-i18n="wk.c2.u3">Egész · Szeletelt · Aprított</span></div>
+          <div class="wk-usp"><div class="wk-dot dr"></div><span data-i18n="wk.c2.u4">Retail, HoReCa, feldolgozóipar</span></div>
         </div>
         <a href="#kapcsolat" class="wk-cta wk-cta-r">
-          Érdeklődjön
+          <span data-i18n="wk.cta.inquire">Érdeklődjön</span>
           <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -609,21 +597,21 @@
       <div class="wk-body">
         <div>
           <div class="wk-tag tag-y">Phase III</div>
-          <h3 class="wk-name wk-name-md">Gomba­komposzt</h3>
+          <h3 class="wk-name wk-name-md" data-i18n="wk.c3.name">Gomba­komposzt</h3>
           <div class="wk-usps">
-            <div class="wk-usp"><div class="wk-dot dg"></div>Saját Phase III komposztüzem</div>
-            <div class="wk-usp"><div class="wk-dot dg"></div>Közép-Európa legmodernebb telephelyei között</div>
-            <div class="wk-usp"><div class="wk-dot dg"></div>EU export partnerek</div>
+            <div class="wk-usp"><div class="wk-dot dg"></div><span data-i18n="wk.c3.u1">Saját Phase III komposztüzem</span></div>
+            <div class="wk-usp"><div class="wk-dot dg"></div><span data-i18n="wk.c3.u2">Közép-Európa legmodernebb telephelyei között</span></div>
+            <div class="wk-usp"><div class="wk-dot dg"></div><span data-i18n="wk.c3.u3">EU export partnerek</span></div>
           </div>
           <a href="#kapcsolat" class="wk-cta wk-cta-y">
-            Érdeklődjön
+            <span data-i18n="wk.cta.inquire">Érdeklődjön</span>
             <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
         <div class="wk-c3-stats">
-          <div class="wk-st"><div class="wk-st-v">3</div><div class="wk-st-l">Fázis</div></div>
-          <div class="wk-st"><div class="wk-st-v">EU</div><div class="wk-st-l">Export</div></div>
-          <div class="wk-st"><div class="wk-st-v">100%</div><div class="wk-st-l">Saját</div></div>
+          <div class="wk-st"><div class="wk-st-v">3</div><div class="wk-st-l" data-i18n="wk.c3.phase">Fázis</div></div>
+          <div class="wk-st"><div class="wk-st-v">EU</div><div class="wk-st-l" data-i18n="wk.c3.export">Export</div></div>
+          <div class="wk-st"><div class="wk-st-v">100%</div><div class="wk-st-l" data-i18n="wk.c3.own">Saját</div></div>
         </div>
       </div>
     </div>
@@ -662,21 +650,21 @@
       <div class="wk-lab-icon"></div>
 
       <div class="wk-body">
-        <div class="wk-tag tag-b">Laboratórium</div>
-        <h3 class="wk-name wk-name-md">Gomba­csíra</h3>
+        <div class="wk-tag tag-b" data-i18n="wk.c4.tag">Laboratórium</div>
+        <h3 class="wk-name wk-name-md" data-i18n="wk.c4.name">Gomba­csíra</h3>
         <div class="wk-badges">
-          <div class="wk-badge">Mo. egyetlen ipari gyára</div>
-          <div class="wk-badge">Hibrid fajták</div>
-          <div class="wk-badge">Steril labor</div>
-          <div class="wk-badge">EU export</div>
+          <div class="wk-badge" data-i18n="wk.c4.b1">Mo. egyetlen ipari gyára</div>
+          <div class="wk-badge" data-i18n="wk.c4.b2">Hibrid fajták</div>
+          <div class="wk-badge" data-i18n="wk.c4.b3">Steril labor</div>
+          <div class="wk-badge" data-i18n="wk.c4.b4">EU export</div>
         </div>
         <div class="wk-usps">
-          <div class="wk-usp"><div class="wk-dot db"></div>Mikrobiológiai & mikológiai háttér</div>
-          <div class="wk-usp"><div class="wk-dot db"></div>Kísérleti fermentációs kapacitás</div>
-          <div class="wk-usp"><div class="wk-dot db"></div>5 kg – 10 kg kiszerelés, bulk rendelés</div>
+          <div class="wk-usp"><div class="wk-dot db"></div><span data-i18n="wk.c4.u1">Mikrobiológiai & mikológiai háttér</span></div>
+          <div class="wk-usp"><div class="wk-dot db"></div><span data-i18n="wk.c4.u2">Kísérleti fermentációs kapacitás</span></div>
+          <div class="wk-usp"><div class="wk-dot db"></div><span data-i18n="wk.c4.u3">5 kg – 10 kg kiszerelés, bulk rendelés</span></div>
         </div>
         <a href="#kapcsolat" class="wk-cta wk-cta-b">
-          Érdeklődjön
+          <span data-i18n="wk.cta.inquire">Érdeklődjön</span>
           <svg class="arr" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -687,12 +675,12 @@
   <!-- CTA sáv -->
   <div class="wk-bottom">
     <div class="wk-bottom-l">
-      <h4>Részletes terméklista és árajánlat?</h4>
-      <p>Személyre szabott ajánlatot adunk 24 órán belül.</p>
+      <h4 data-i18n="wk.bot.h">Részletes terméklista és árajánlat?</h4>
+      <p data-i18n="wk.bot.p">Személyre szabott ajánlatot adunk 24 órán belül.</p>
     </div>
     <div class="wk-bottom-r">
-      <a href="mailto:info@koronagomba.hu" class="btn-primary">✉️ Ajánlatot kérek</a>
-      <a href="tel:+3636550500" class="btn-secondary">📞 +36 (36) 550 500</a>
+      <a href="mailto:info@koronagomba.hu" class="btn-primary" data-i18n="wk.bot.quote">Ajánlatot kérek</a>
+      <a href="tel:+3636550500" class="btn-secondary">+36 (36) 550 500</a>
     </div>
   </div>
 </section>
@@ -713,26 +701,26 @@
       </div>
       <div class="about-green-pill">
         <span class="pill-icon">🌱</span>
-        <span class="pill-text">Tartósítószer nélkül</span>
+        <span class="pill-text" data-i18n="about.pill">Tartósítószer nélkül</span>
       </div>
     </div>
 
     <div>
       <div class="section-label reveal">
         <div class="section-label-dot"></div>
-        <span>Rólunk</span>
+        <span data-i18n="about.label">Rólunk</span>
       </div>
-      <h2 class="section-title reveal reveal-d1">Három évtized<br>a gomba <span class="italic red">szenvedélye.</span></h2>
-      <p class="section-sub reveal reveal-d2">A Korona Gombaipari Egyesülést <strong>családi vállalkozások hozták létre</strong> azért, hogy a hagyományokra építve, de a legmodernebb technológiákat alkalmazva közösen fejlődjenek. Ennek köszönhetően mára Közép-Európa egyik meghatározó gombaipari szereplőjévé váltunk.</p>
-      <p class="section-sub reveal reveal-d3" style="margin-top:16px">A teljes gombatermesztési folyamatot lefedjük: a szaporítóanyag előállításától és a komposztgyártástól kezdve a magas színvonalú termesztésen át a feldolgozásig – így <strong>garantáljuk a folyamatos, megbízható minőséget</strong>.</p>
+      <h2 class="section-title reveal reveal-d1" data-i18n-html="about.title">Három évtized<br>a gomba <span class="italic red">szenvedélye.</span></h2>
+      <p class="section-sub reveal reveal-d2" data-i18n-html="about.p1">A Korona Gombaipari Egyesülést <strong>családi vállalkozások hozták létre</strong> azért, hogy a hagyományokra építve, de a legmodernebb technológiákat alkalmazva közösen fejlődjenek. Ennek köszönhetően mára Közép-Európa egyik meghatározó gombaipari szereplőjévé váltunk.</p>
+      <p class="section-sub reveal reveal-d3" style="margin-top:16px" data-i18n-html="about.p2">A teljes gombatermesztési folyamatot lefedjük: a szaporítóanyag előállításától és a komposztgyártástól kezdve a magas színvonalú termesztésen át a feldolgozásig – így <strong>garantáljuk a folyamatos, megbízható minőséget</strong>.</p>
 
       <!-- Bővebben collapse -->
       <div id="aboutMore" style="max-height:0;overflow:hidden;transition:max-height 0.5s ease">
-        <p class="section-sub" style="margin-top:16px">Több száz kollégánkkal és elsősorban hazai partnereinkkel nap mint nap azon dolgozunk, hogy termékeink frissen, kiváló minőségben jussanak el a magyar és nemzetközi piacokra. <strong>Folyamatosan fejlődünk</strong>: növeljük hatékonyságunkat, új technológiákat vezetünk be, és kiemelt figyelmet fordítunk a kutatás-fejlesztésre.</p>
-        <p class="section-sub" style="margin-top:16px">Célunk, hogy partnereinket mindig a lehető legmagasabb színvonalon, megbízhatóan szolgáljuk ki. Elhivatottak vagyunk abban, hogy minden egyes nap friss, biztonságos és kiváló minőségű élelmiszer kerüljön vásárlóink asztalára – mert hisszük, hogy <strong>a minőség nem kompromisszum kérdése, hanem felelősség</strong>.</p>
-        <p class="section-sub" style="margin-top:16px"><em>Szenvedélyünk a gomba, és ezt a szenvedélyt visszük bele minden egyes nap a munkánkba.</em></p>
+        <p class="section-sub" style="margin-top:16px" data-i18n-html="about.p3">Több száz kollégánkkal és elsősorban hazai partnereinkkel nap mint nap azon dolgozunk, hogy termékeink frissen, kiváló minőségben jussanak el a magyar és nemzetközi piacokra. <strong>Folyamatosan fejlődünk</strong>: növeljük hatékonyságunkat, új technológiákat vezetünk be, és kiemelt figyelmet fordítunk a kutatás-fejlesztésre.</p>
+        <p class="section-sub" style="margin-top:16px" data-i18n-html="about.p4">Célunk, hogy partnereinket mindig a lehető legmagasabb színvonalon, megbízhatóan szolgáljuk ki. Elhivatottak vagyunk abban, hogy minden egyes nap friss, biztonságos és kiváló minőségű élelmiszer kerüljön vásárlóink asztalára – mert hisszük, hogy <strong>a minőség nem kompromisszum kérdése, hanem felelősség</strong>.</p>
+        <p class="section-sub" style="margin-top:16px" data-i18n-html="about.p5"><em>Szenvedélyünk a gomba, és ezt a szenvedélyt visszük bele minden egyes nap a munkánkba.</em></p>
       </div>
-      <button onclick="let el=document.getElementById('aboutMore');let open=el.style.maxHeight!=='0px';el.style.maxHeight=open?'0px':'600px';this.textContent=open?'Bővebben ↓':'Kevesebb ↑'" style="margin-top:16px;background:none;border:1px solid rgba(46,139,46,.4);color:var(--g3,#2e5a2e);font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;padding:8px 20px;border-radius:40px;cursor:pointer;transition:all .3s ease" onmouseover="this.style.background='rgba(46,139,46,.1)'" onmouseout="this.style.background='none'">Bővebben ↓</button>
+      <button id="aboutToggle" onclick="let el=document.getElementById('aboutMore');let open=el.style.maxHeight!=='0px';el.style.maxHeight=open?'0px':'600px';this.dataset.open=open?'0':'1';window.applyI18n&&window.applyI18n();" style="margin-top:16px;background:none;border:1px solid rgba(46,139,46,.4);color:var(--g3,#2e5a2e);font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;padding:8px 20px;border-radius:40px;cursor:pointer;transition:all .3s ease" data-open="0" data-i18n="about.more" onmouseover="this.style.background='rgba(46,139,46,.1)'" onmouseout="this.style.background='none'">Bővebben ↓</button>
     </div>
   </div>
 </section>
@@ -742,9 +730,9 @@
   <div style="max-width:1100px;margin:0 auto;padding:0 24px">
     <div class="section-label reveal" style="justify-content:center;display:flex;width:fit-content;margin:0 auto">
       <div class="section-label-dot"></div>
-      <span>Cégtörténetünk</span>
+      <span data-i18n="hist.label">Cégtörténetünk</span>
     </div>
-    <h2 class="section-title reveal reveal-d1" style="text-align:center;font-size:clamp(42px,6vw,72px);margin-top:12px">Az út, amit <span class="italic red">bejártunk.</span></h2>
+    <h2 class="section-title reveal reveal-d1" style="text-align:center;font-size:clamp(42px,6vw,72px);margin-top:12px" data-i18n-html="hist.title">Az út, amit <span class="italic red">bejártunk.</span></h2>
 
     <style>
     /* TIMELINE V2 – animated spine + circle images */
@@ -808,8 +796,8 @@
         <div class="tl2-dot"></div>
         <div class="tl2-img-wrap"><img src="assets/img/komposzt.jpg" alt="Alapítás"></div>
         <div class="tl2-content">
-          <div class="tl2-year">1990-es évek</div>
-          <div class="tl2-txt">Alapítás – Demjén, Heves megye. Első holland típusú gombaházak megépítése, családi vállalkozások összefogásával.</div>
+          <div class="tl2-year" data-i18n="hist.t1.y">1990-es évek</div>
+          <div class="tl2-txt" data-i18n="hist.t1.t">Alapítás – Demjén, Heves megye. Első holland típusú gombaházak megépítése, családi vállalkozások összefogásával.</div>
         </div>
       </div>
 
@@ -817,8 +805,8 @@
         <div class="tl2-dot"></div>
         <div class="tl2-img-wrap"><img src="assets/img/friss.jpg" alt="Növekedés"></div>
         <div class="tl2-content">
-          <div class="tl2-year">2000-es évek</div>
-          <div class="tl2-txt">45.000 m² termesztőfelület, ~100 automatizált gombaház, saját hűtős szállítóflotta kiépítése.</div>
+          <div class="tl2-year" data-i18n="hist.t2.y">2000-es évek</div>
+          <div class="tl2-txt" data-i18n="hist.t2.t">45.000 m² termesztőfelület, ~100 automatizált gombaház, saját hűtős szállítóflotta kiépítése.</div>
         </div>
       </div>
 
@@ -826,8 +814,8 @@
         <div class="tl2-dot"></div>
         <div class="tl2-img-wrap"><img src="assets/img/csira.jpg" alt="Laboratórium"></div>
         <div class="tl2-content">
-          <div class="tl2-year">2010-es évek</div>
-          <div class="tl2-txt">Magyarország első ipari gombacsíra-laboratóriuma, Phase III komposztüzem, kutatás-fejlesztési kapacitás.</div>
+          <div class="tl2-year" data-i18n="hist.t3.y">2010-es évek</div>
+          <div class="tl2-txt" data-i18n="hist.t3.t">Magyarország első ipari gombacsíra-laboratóriuma, Phase III komposztüzem, kutatás-fejlesztési kapacitás.</div>
         </div>
       </div>
 
@@ -835,8 +823,8 @@
         <div class="tl2-dot"></div>
         <div class="tl2-img-wrap"><img src="assets/img/csiperke.jpg" alt="Jelen"></div>
         <div class="tl2-content">
-          <div class="tl2-year">Ma</div>
-          <div class="tl2-txt">EU export, IFS & HACCP minősítés, folyamatos technológiai fejlesztés. Közép-Európa egyik meghatározó gombaipari szereplője.</div>
+          <div class="tl2-year" data-i18n="hist.t4.y">Ma</div>
+          <div class="tl2-txt" data-i18n="hist.t4.t">EU export, IFS & HACCP minősítés, folyamatos technológiai fejlesztés. Közép-Európa egyik meghatározó gombaipari szereplője.</div>
         </div>
       </div>
     </div>
@@ -879,233 +867,226 @@
 })();
 </script>
 
-<!-- ══════════════════════════════════ FEATURES ═══ -->
-<div class="features-bg" id="miert-mi" style="margin-bottom:24px">
-  <div class="features-inner">
-    <div class="features-header">
-      <div>
-        <div class="section-label reveal">
-          <div class="section-label-dot"></div>
-          <span>Előnyeink</span>
+
+<!-- ══════════════════════════════════ MINŐSÉGBIZTOSÍTÁS (pinned horizontal) ═══ -->
+<style>
+.qa-pin{position:relative;background:#0D3B0D;color:#fff;margin-bottom:24px}
+.qa-pin-track-h{height:340vh}
+.qa-pin-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.qa-pin-head{padding:32px 6vw 18px;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.qa-pin-head .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:10px}
+.qa-pin-head .lbl::before{content:"";width:28px;height:1px;background:rgba(255,255,255,.4)}
+.qa-pin-head h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(34px,4vw,56px);line-height:1;letter-spacing:-.02em;margin:14px 0 0}
+.qa-pin-head h2 em{font-style:italic;color:#ff6b7a}
+.qa-pin-head p{max-width:460px;color:rgba(255,255,255,.65);font-size:15px;line-height:1.6;margin:0}
+.qa-pin-track{display:flex;align-items:stretch;gap:28px;padding:24px 6vw 32px;will-change:transform}
+.qa-card{flex:0 0 420px;background:#0a2d0a;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;min-height:440px;position:relative;overflow:hidden}
+.qa-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--cl,#c5283d)}
+.qa-card .mono{font-family:'Fraunces',serif;font-weight:700;font-size:88px;line-height:.9;letter-spacing:-.04em;color:#fff;margin:0}
+.qa-card .num{position:absolute;top:24px;right:28px;font-size:12px;font-weight:600;letter-spacing:.18em;color:rgba(255,255,255,.4)}
+.qa-card .nm{font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.55);margin:14px 0 0}
+.qa-card .ds{font-size:15px;line-height:1.6;color:rgba(255,255,255,.78);margin:20px 0 0}
+.qa-card .tag{margin-top:24px;display:inline-block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.75);align-self:flex-start}
+.qa-progress{margin:0 6vw 24px;height:2px;background:rgba(255,255,255,.08);position:relative;border-radius:2px;overflow:hidden}
+.qa-progress-bar{position:absolute;left:0;top:0;bottom:0;width:20%;background:#ff6b7a;transition:transform .1s linear;transform-origin:left}
+.qa-hint{padding:0 6vw 32px;display:flex;justify-content:space-between;font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.4)}
+
+@media (max-width:880px){
+  .qa-pin-track-h{height:380vh}
+  .qa-pin-head{padding:20px 6vw 12px}
+  .qa-pin-head h2{font-size:34px}
+  .qa-pin-head p{font-size:14px}
+  .qa-pin-track{padding:16px 6vw 24px;gap:18px}
+  .qa-card{flex:0 0 82vw;min-height:380px;padding:24px}
+  .qa-card .mono{font-size:64px}
+}
+</style>
+
+<section class="qa-pin" id="minosegbiztositas">
+  <div class="qa-pin-track-h">
+    <div class="qa-pin-sticky">
+      <div class="qa-pin-head">
+        <div>
+          <div class="lbl" data-i18n="qa.label">Minőségbiztosítás</div>
+          <h2 data-i18n-html="qa.title">Tanúsított <em>minőség.</em></h2>
         </div>
-        <h2 class="section-title reveal reveal-d1">Miért válasszon<br><span class="italic" style="color:#7BC67B">minket?</span></h2>
+        <p data-i18n="qa.sub">Független, akkreditált auditok garantálják, hogy minden gombánk a legmagasabb élelmiszer-biztonsági és fenntarthatósági szabványoknak feleljen meg – a komposzttól a polcig.</p>
       </div>
-      <p class="section-sub reveal reveal-d2">Teljes vertikum, saját technológia, közvetlen minőségellenőrzés – a termelőtől a vásárlóig.</p>
-    </div>
 
-    <div class="features-grid">
-      <div class="feature-card reveal">
-        <div class="feat-num">01</div>
-        <div class="feat-icon">🌡️</div>
-        <div class="feat-title">Vákuumhűtős frissesség</div>
-        <p class="feat-text">Szedés után legfeljebb 1 órán belül befejezzük a termékek hűtését – ez garantálja a páratlan frissességet és hosszabb eltarthatóságot.</p>
-      </div>
-      <div class="feature-card reveal reveal-d1">
-        <div class="feat-num">02</div>
-        <div class="feat-icon">🚛</div>
-        <div class="feat-title">Saját szállítóflotta</div>
-        <p class="feat-text">Osztályozás és csomagolás után saját hűtős gépjárműveinkkel szállítjuk termékeinket – közvetítő nélkül, biztonságosan.</p>
-      </div>
-      <div class="feature-card red-feature reveal reveal-d2">
-        <div class="feat-num">03</div>
-        <div class="feat-icon">🔬</div>
-        <div class="feat-title">Saját laboratórium</div>
-        <p class="feat-text">Magyarország egyetlen ipari gombacsíra-laboratóriuma – mikrobiológiai, mikológiai és kísérleti fermentációs háttérrel.</p>
-      </div>
-      <div class="feature-card reveal reveal-d1">
-        <div class="feat-num">04</div>
-        <div class="feat-icon">🌱</div>
-        <div class="feat-title">Tartósítószer nélkül</div>
-        <p class="feat-text">Konzervtermékeink kíméletes hőkezeléssel, tartósítószer nélkül készülnek – megőrizve a gombák ásványi és vitamin tartalmát.</p>
-      </div>
-      <div class="feature-card reveal reveal-d2">
-        <div class="feat-num">05</div>
-        <div class="feat-icon">🏆</div>
-        <div class="feat-title">Minősített minőség</div>
-        <p class="feat-text">A legnagyobb tanúsító intézetek rendszeres ellenőrzése mellett termesztünk és gyártunk – HACCP, IFS és BRC szabványok szerint.</p>
-      </div>
-      <div class="feature-card red-feature reveal reveal-d3">
-        <div class="feat-num">06</div>
-        <div class="feat-icon">🌍</div>
-        <div class="feat-title">EU export tapasztalat</div>
-        <p class="feat-text">Termékeinket nemcsak a magyar piacon, hanem számos európai országban is értékesítjük – megbízható partnerként, évtizedes tapasztalattal.</p>
-      </div>
-    </div>
+      <div class="qa-pin-track" id="qaTrack">
+        <article class="qa-card" style="--cl:#2fb46a">
+          <div>
+            <div class="num">01 / 05</div>
+            <h3 class="mono">GAP</h3>
+            <div class="nm">Global G.A.P.</div>
+            <p class="ds" data-i18n="qa.c1.d">Nemzetközi mezőgazdasági jó gyakorlat tanúsítvány – felelős termesztés, teljes nyomon követhetőség és élelmiszer-biztonság a komposzttól a betakarításig.</p>
+          </div>
+          <span class="tag" data-i18n="qa.c1.t">Mezőgazdaság</span>
+        </article>
 
-    <!-- Cert badges -->
-    <div class="certs-row">
-      <div class="cert-badge reveal reveal-d1">
-        <span class="cert-icon">✅</span>
-        <span class="cert-name">IFS Food</span>
+        <article class="qa-card" style="--cl:#3b82f6">
+          <div>
+            <div class="num">02 / 05</div>
+            <h3 class="mono">IFS</h3>
+            <div class="nm">International Featured Standards</div>
+            <p class="ds" data-i18n="qa.c2.d">A vezető európai kereskedelmi láncok által elfogadott élelmiszer-biztonsági és minőségirányítási szabvány a teljes feldolgozási folyamatra.</p>
+          </div>
+          <span class="tag" data-i18n="qa.c2.t">Feldolgozás</span>
+        </article>
+
+        <article class="qa-card" style="--cl:#7cb342">
+          <div>
+            <div class="num">03 / 05</div>
+            <h3 class="mono">BIO</h3>
+            <div class="nm">Biokontroll</div>
+            <p class="ds" data-i18n="qa.c3.d">Akkreditált független szervezet bio tanúsítása – a környezettudatos, vegyszermentes termesztés bizonyítéka az EU 2018/848 rendelet szerint.</p>
+          </div>
+          <span class="tag" data-i18n="qa.c3.t">Bio termesztés</span>
+        </article>
+
+        <article class="qa-card" style="--cl:#d97706">
+          <div>
+            <div class="num">04 / 05</div>
+            <h3 class="mono">GRASP</h3>
+            <div class="nm">Risk Assessment on Social Practice</div>
+            <p class="ds" data-i18n="qa.c4.d">A munkavállalók jogainak, biztonságának és tisztességes bánásmódjának független, gazdaságon belüli értékelése – a GLOBALG.A.P. szociális kiegészítése.</p>
+          </div>
+          <span class="tag" data-i18n="qa.c4.t">Szociális felelősség</span>
+        </article>
+
+        <article class="qa-card" style="--cl:#c5283d">
+          <div>
+            <div class="num">05 / 05</div>
+            <h3 class="mono">HACCP</h3>
+            <div class="nm">Veszélyelemzés &amp; Kritikus Pontok</div>
+            <p class="ds" data-i18n="qa.c5.d">Élelmiszer-biztonsági kockázatok módszeres azonosítása és kezelése a teljes termelési láncban – a Codex Alimentarius szerint, minden folyamatba beépítve.</p>
+          </div>
+          <span class="tag" data-i18n="qa.c5.t">Élelmiszer-biztonság</span>
+        </article>
       </div>
-      <div class="cert-badge reveal reveal-d2">
-        <span class="cert-icon">✅</span>
-        <span class="cert-name">HACCP</span>
-      </div>
-      <div class="cert-badge reveal reveal-d3">
-        <span class="cert-icon">✅</span>
-        <span class="cert-name">BRC Global</span>
-      </div>
-      <div class="cert-badge reveal reveal-d4">
-        <span class="cert-icon">✅</span>
-        <span class="cert-name">EU Export</span>
-      </div>
-      <div class="cert-badge reveal reveal-d5">
-        <span class="cert-icon">✅</span>
-        <span class="cert-name">ISO 22000</span>
-      </div>
+
+      <div class="qa-progress"><div class="qa-progress-bar" id="qaBar"></div></div>
+      <div class="qa-hint"><span data-i18n="qa.hint">Görgessen a tanúsítványokon át</span><span data-i18n="qa.count">5 szabvány</span></div>
     </div>
   </div>
-</div>
+</section>
+
+<script>
+(function(){
+  var sec=document.getElementById('minosegbiztositas');
+  var track=document.getElementById('qaTrack');
+  var bar=document.getElementById('qaBar');
+  if(!sec||!track||!bar) return;
+  var lastP=-1;
+  function tick(){
+    var rect=sec.getBoundingClientRect();
+    var total=sec.offsetHeight-window.innerHeight;
+    var p=Math.min(1,Math.max(0,-rect.top/total));
+    if(p===lastP) return;
+    lastP=p;
+    var maxX=track.scrollWidth-window.innerWidth;
+    track.style.transform='translateX('+(-p*maxX)+'px)';
+    bar.style.transform='scaleX('+(0.2+p*0.8)+')';
+  }
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(!ticking){requestAnimationFrame(function(){tick();ticking=false;});ticking=true;}
+  },{passive:true});
+  window.addEventListener('resize',tick);
+  tick();
+})();
+</script>
 
 <!-- ═══════════════════════════════════ PROCESS ═══ -->
 <section class="section" id="folyamat">
   <div class="process-header">
     <div class="section-label reveal">
       <div class="section-label-dot"></div>
-      <span>Hogyan dolgozunk</span>
+      <span data-i18n="proc.label">Hogyan dolgozunk</span>
     </div>
-    <h2 class="section-title reveal reveal-d1">A termelőtől <span class="italic">az asztalodra.</span></h2>
+    <h2 class="section-title reveal reveal-d1" data-i18n-html="proc.title">A termelőtől <span class="italic">az asztalodra.</span></h2>
   </div>
   <div class="process-steps">
     <div class="process-step reveal">
       <div class="step-bubble" data-num="1">🌾</div>
-      <div class="step-title">Komposzt­gyártás</div>
-      <p class="step-text">Saját Phase III komposztüzem – Közép-Európa egyik legmodernebb telephelye.</p>
+      <div class="step-title" data-i18n="proc.s1.t">Komposzt­gyártás</div>
+      <p class="step-text" data-i18n="proc.s1.d">Saját Phase III komposztüzem – Közép-Európa egyik legmodernebb telephelye.</p>
     </div>
     <div class="process-step reveal reveal-d1">
       <div class="step-bubble" data-num="2">🔬</div>
-      <div class="step-title">Csíra­oltás</div>
-      <p class="step-text">Steril laborban, saját gombacsírával – hibrid fajtákkal a legjobb hozamért.</p>
+      <div class="step-title" data-i18n="proc.s2.t">Csíra­oltás</div>
+      <p class="step-text" data-i18n="proc.s2.d">Steril laborban, saját gombacsírával – hibrid fajtákkal a legjobb hozamért.</p>
     </div>
     <div class="process-step reveal reveal-d2">
       <div class="step-bubble" data-num="3">🏠</div>
-      <div class="step-title">Termesztés</div>
-      <p class="step-text">~100 automatizált gombaházban, 45.000 m²-en, képzett szakemberek felügyeletével.</p>
+      <div class="step-title" data-i18n="proc.s3.t">Termesztés</div>
+      <p class="step-text" data-i18n="proc.s3.d">~100 automatizált gombaházban, 45.000 m²-en, képzett szakemberek felügyeletével.</p>
     </div>
     <div class="process-step reveal reveal-d3">
       <div class="step-bubble" data-num="4">❄️</div>
-      <div class="step-title">Hűtés & Csomagolás</div>
-      <p class="step-text">Vákuumhűtők, nagyteljesítményű osztályozó sorok – 1 órán belül hűtve.</p>
+      <div class="step-title" data-i18n="proc.s4.t">Hűtés & Csomagolás</div>
+      <p class="step-text" data-i18n="proc.s4.d">Vákuumhűtők, nagyteljesítményű osztályozó sorok – 1 órán belül hűtve.</p>
     </div>
     <div class="process-step reveal reveal-d4">
       <div class="step-bubble" data-num="5">🚛</div>
-      <div class="step-title">Szállítás</div>
-      <p class="step-text">Saját hűtős flottával, közvetlenül a partnerekhez – minden nap frissen.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════ WHY / IMG ═══ -->
-<div class="why-section" id="kapcsolat">
-  <div class="why-left">
-    <div class="section-label">
-      <div class="section-label-dot"></div>
-      <span>Kinek dolgozunk</span>
-    </div>
-    <h2 class="section-title">Retail, HoReCa,<br><span class="italic" style="color:#7BC67B">és export.</span></h2>
-    <p class="section-sub" style="color:rgba(255,255,255,.55);margin-bottom:32px">Megbízható gombabeszállítót keres? Lépjen kapcsolatba velünk, és közösen kialakítjuk az Önre szabott megoldást.</p>
-    <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:36px">
-      <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:14px;font-weight:500">
-        <span style="width:24px;height:24px;background:rgba(46,139,46,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
-        Kiskereskedelem & szupermarketek
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:14px;font-weight:500">
-        <span style="width:24px;height:24px;background:rgba(46,139,46,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
-        Éttermek, szállodák, catering
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:14px;font-weight:500">
-        <span style="width:24px;height:24px;background:rgba(185,40,40,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
-        Feldolgozóipari partnerek
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:14px;font-weight:500">
-        <span style="width:24px;height:24px;background:rgba(185,40,40,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px">✓</span>
-        EU export – több ország
-      </div>
-    </div>
-    <a href="mailto:info@koronagomba.hu" class="btn-primary" style="width:fit-content">Írjon nekünk →</a>
-  </div>
-  <div class="why-img-grid">
-    <div class="why-img-cell tall">
-      <img src="assets/img/porto.jpg" alt="Portobello">
-    </div>
-    <div class="why-img-cell">
-      <img src="assets/img/laska.jpg" alt="Laska">
-    </div>
-    <div class="why-img-cell">
-      <img src="assets/img/shimeji.jpg" alt="Shimeji">
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════ TESTIMONIALS ════ -->
-<section class="testimonial-section">
-  <div class="test-header">
-    <div class="section-label reveal">
-      <div class="section-label-dot"></div>
-      <span>Partnereink mondják</span>
-    </div>
-    <h2 class="section-title reveal reveal-d1">Akik <span class="italic">bíznak</span> bennünk.</h2>
-  </div>
-  <div class="test-grid">
-    <div class="test-card reveal">
-      <div class="test-stars">⭐⭐⭐⭐⭐</div>
-      <p class="test-text">„A Korona Gomba megbízható, precíz partner. Mindig friss áru, pontos szállítás – évek óta együtt dolgozunk, és soha nem volt problémánk."</p>
-      <div class="test-author">
-        <div class="test-avatar">R</div>
-        <div>
-          <div class="test-name">Retail Partner</div>
-          <div class="test-role">Nagyobb szupermarket lánc, Budapest</div>
-        </div>
-      </div>
-    </div>
-    <div class="test-card featured reveal reveal-d1">
-      <div class="test-stars">⭐⭐⭐⭐⭐</div>
-      <p class="test-text">„Éttermi konyhánk alapanyagainak jelentős részét tőlük szerezzük be. A shiitake és portobello minősége verhetetlen – vendégeink imádják."</p>
-      <div class="test-author">
-        <div class="test-avatar" style="background:linear-gradient(135deg,var(--r2),var(--r3))">É</div>
-        <div>
-          <div class="test-name">Éttermi Partner</div>
-          <div class="test-role">Fine dining étterem, Eger</div>
-        </div>
-      </div>
-    </div>
-    <div class="test-card reveal reveal-d2">
-      <div class="test-stars">⭐⭐⭐⭐⭐</div>
-      <p class="test-text">„A gombacsíra minősége és a laborháttér lenyűgöző. Importból visszaállítottunk hazai forrásra – jobb minőség, rövidebb szállítási lánc."</p>
-      <div class="test-author">
-        <div class="test-avatar" style="background:linear-gradient(135deg,var(--r1),var(--r2))">F</div>
-        <div>
-          <div class="test-name">Feldolgozóipari Partner</div>
-          <div class="test-role">Gombatermesztő vállalkozás, EU</div>
-        </div>
-      </div>
+      <div class="step-title" data-i18n="proc.s5.t">Szállítás</div>
+      <p class="step-text" data-i18n="proc.s5.d">Saját hűtős flottával, közvetlenül a partnerekhez – minden nap frissen.</p>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════════ CTA ════ -->
 <div class="cta-wrap" style="margin-bottom:24px">
-  <div class="cta-eyebrow">🤝 Együttműködés</div>
-  <h2 class="cta-title">Legyünk<br><em>partnerei</em><br>egymásnak.</h2>
-  <p class="cta-sub">Megbízható gombabeszállítót keres? Érdeklődik gombacsíra vagy gombakomposzt iránt? Írjon nekünk – 24 órán belül válaszolunk.</p>
+  <div class="cta-eyebrow" data-i18n="cta.eyebrow">Együttműködés</div>
+  <h2 class="cta-title" data-i18n-html="cta.title">Legyünk<br><em>partnerei</em><br>egymásnak.</h2>
+  <p class="cta-sub" data-i18n="cta.sub">Megbízható gombabeszállítót keres? Érdeklődik gombacsíra vagy gombakomposzt iránt? Írjon nekünk – 24 órán belül válaszolunk.</p>
   <div class="cta-btns">
-    <a href="mailto:info@koronagomba.hu" class="btn-white">✉️ Kapcsolatfelvétel</a>
-    <a href="tel:+3636550500" class="btn-ghost-white">📞 +36 (36) 550 500</a>
+    <a href="mailto:info@koronagomba.hu" class="btn-white" data-i18n="cta.btn">Kapcsolatfelvétel</a>
+    <a href="tel:+3636550500" class="btn-ghost-white">+36 (36) 550 500</a>
   </div>
 </div>
 
-<!-- NEWSLETTER -->
-<div class="newsletter" style="margin-bottom:24px">
-  <div class="newsletter-left">
-    <h3>Hírek & Újdonságok</h3>
-    <p>Értesüljön elsőként a szezonális termékekről és aktualitásokról.</p>
+<!-- ══════════════════════════════════ GOMBAHÍRADÓ – feliratkozás ═══ -->
+<style>
+.gh-sub{width:100%;margin:48px 0 24px;padding:72px 6vw;border-radius:0;position:relative;overflow:hidden;background:
+  linear-gradient(135deg,#0D3B0D 0%,#1A5C1A 60%,#2E8B2E 100%);
+  color:#fff;display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:center}
+.gh-sub::before{content:'';position:absolute;right:-80px;top:-100px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,106,.18),transparent 65%);pointer-events:none}
+.gh-sub::after{content:'';position:absolute;left:-60px;bottom:-100px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(123,26,26,.22),transparent 65%);pointer-events:none}
+.gh-sub .lbl{display:inline-flex;align-items:center;gap:10px;font-size:11px;text-transform:uppercase;letter-spacing:.24em;color:#d4af6a;position:relative}
+.gh-sub .lbl::before{content:'';width:24px;height:1px;background:#d4af6a}
+.gh-sub h3{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.05;letter-spacing:-.02em;margin:0;position:relative}
+.gh-sub h3 em{font-style:italic;font-weight:300;color:#d4af6a}
+.gh-sub p{margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.75);max-width:480px;position:relative}
+.gh-sub .perks{display:flex;gap:22px;margin-top:22px;flex-wrap:wrap;position:relative}
+.gh-sub .perks span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65);display:inline-flex;align-items:center;gap:8px}
+.gh-sub .perks span::before{content:'';width:5px;height:5px;background:#d4af6a;border-radius:50%}
+.gh-sub-form{position:relative;display:flex;flex-direction:column;gap:12px}
+.gh-sub-form .input-wrap{position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:20px 22px;backdrop-filter:blur(8px);transition:border-color .2s ease}
+.gh-sub-form .input-wrap:focus-within{border-color:#d4af6a}
+.gh-sub-form input{width:100%;background:transparent;border:0;outline:0;color:#fff;font-family:'Fraunces',serif;font-weight:400;font-size:17px;padding:0}
+.gh-sub-form input::placeholder{color:rgba(255,255,255,.35)}
+.gh-sub-form button{margin-top:6px;background:#d4af6a;color:#0D3B0D;border:0;border-radius:14px;padding:16px 22px;font-family:'Fraunces',serif;font-weight:700;font-size:15px;letter-spacing:.02em;cursor:pointer;display:inline-flex;align-items:center;justify-content:space-between;gap:14px;transition:transform .2s ease,background .2s ease}
+.gh-sub-form button:hover{background:#e6c98a;transform:translateY(-2px)}
+.gh-sub-form .legal{font-size:11px;color:rgba(255,255,255,.45);line-height:1.5;margin-top:4px}
+.gh-sub-form .legal a{color:rgba(255,255,255,.7);text-decoration:underline}
+@media(max-width:820px){
+  .gh-sub{grid-template-columns:1fr;padding:40px 28px;gap:32px;margin:32px 16px}
+  .gh-sub::before,.gh-sub::after{width:200px;height:200px}
+}
+</style>
+
+<section class="gh-sub" id="gombahirado">
+  <div>
+    <h3 data-i18n-html="gh.title">Gombahíradó és <em>friss receptjeink.</em></h3>
   </div>
-  <form class="newsletter-form" id="nlForm">
-    <input type="email" class="newsletter-input" placeholder="Email cím..." required>
-    <button type="submit" class="newsletter-btn">Feliratkozás</button>
+  <form class="gh-sub-form" id="nlForm">
+    <div class="input-wrap">
+      <input id="nlEmail" type="email" placeholder="Email cím" data-i18n-placeholder="gh.placeholder" required>
+    </div>
+    <button type="submit"><span data-i18n="gh.btn">Feliratkozom</span> <span aria-hidden="true">→</span></button>
   </form>
-</div>
+</section>
 
 <!-- ══════════════════════════════════ FOOTER ════ -->
 <footer>
@@ -1118,7 +1099,7 @@
           <span class="sub">Gombaipari Egyesülés</span>
         </div>
       </a>
-      <p class="footer-tagline">Közép-Európa egyik vezető gombaipari csoportosulása. Gombatermesztés, kereskedelem, feldolgozás – egy kézből, 30 éve.</p>
+      <p class="footer-tagline" data-i18n="ft.tag">Közép-Európa egyik vezető gombaipari csoportosulása. Gombatermesztés, kereskedelem, feldolgozás – egy kézből, 30 éve.</p>
       <div class="footer-contact">
         Magyar Gomba Kertész Kft.<br>
         3395 Demjén, 0173/7/A/1<br>
@@ -1127,38 +1108,38 @@
       </div>
     </div>
     <div class="footer-col">
-      <h4>Termékeink</h4>
+      <h4 data-i18n="ft.h.prod">Termékeink</h4>
       <ul>
-        <li><a href="friss-gomba.html">Friss gomba</a></li>
-        <li><a href="gombakonzerv.html">Gombakonzerv</a></li>
-        <li><a href="gombacsira.html">Gombacsíra</a></li>
-        <li><a href="gombakomposzt.html">Gombakomposzt</a></li>
-        <li><a href="termekek.html">Terméklisták</a></li>
+        <li><a href="friss-gomba.html" data-i18n="nav.fresh">Friss gomba</a></li>
+        <li><a href="gombakonzerv.html" data-i18n="nav.canned">Gombakonzerv</a></li>
+        <li><a href="gombacsira.html" data-i18n="nav.spawn">Gombacsíra</a></li>
+        <li><a href="gombakomposzt.html" data-i18n="nav.compost">Gombakomposzt</a></li>
+        <li><a href="termekek.html" data-i18n="ft.lists">Terméklisták</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Szegmensek</h4>
+      <h4 data-i18n="ft.h.seg">Szegmensek</h4>
       <ul>
         <li><a href="partnerek.html">Retail</a></li>
         <li><a href="partnerek.html">HoReCa</a></li>
-        <li><a href="partnerek.html">Feldolgozóipar</a></li>
-        <li><a href="partnerek.html">Gombatermesztők</a></li>
-        <li><a href="partnerek.html">Export partnerek</a></li>
+        <li><a href="partnerek.html" data-i18n="ft.proc">Feldolgozóipar</a></li>
+        <li><a href="partnerek.html" data-i18n="ft.grow">Gombatermesztők</a></li>
+        <li><a href="partnerek.html" data-i18n="ft.exp">Export partnerek</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Információk</h4>
+      <h4 data-i18n="ft.h.info">Információk</h4>
       <ul>
-        <li><a href="rolunk.html">Rólunk</a></li>
-        <li><a href="miert-mi.html">Minőségbiztosítás</a></li>
-        <li><a href="miert-mi.html#folyamat">Folyamatunk</a></li>
-        <li><a href="kapcsolat.html">Kapcsolat</a></li>
-        <li><a href="#">Adatvédelem</a></li>
+        <li><a href="rolunk.html" data-i18n="nav.about">Rólunk</a></li>
+        <li><a href="miert-mi.html" data-i18n="nav.quality">Minőségbiztosítás</a></li>
+        <li><a href="miert-mi.html#folyamat" data-i18n="ft.process">Folyamatunk</a></li>
+        <li><a href="kapcsolat.html" data-i18n="ft.contact">Kapcsolat</a></li>
+        <li><a href="#" data-i18n="ft.privacy">Adatvédelem</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Korona Gombaipari Egyesülés · Minden jog fenntartva</div>
+    <div class="footer-copy" data-i18n="ft.copy">© 2026 Korona Gombaipari Egyesülés · Minden jog fenntartva</div>
     <div class="footer-social">
       <a href="https://facebook.com" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(255,255,255,.6)"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
@@ -1172,6 +1153,237 @@
     </div>
   </div>
 </footer>
+
+<script>
+/* ═════════════════════ I18N – HU / EN / DE ═════════════════════ */
+(function(){
+  const T = {
+    hu: {
+      _title:'Korona Gomba – Közép-Európa vezető gombaipari egyesülése',
+      _desc :'Korona Gombaipari Egyesülés – Közép-Európa vezető gombaipari csoportosulása. Friss gombák, gombacsíra, gombakomposzt. 30+ év tapasztalat, 45.000 m² termesztőfelület.',
+      'nav.home':'Home','nav.products':'Termékek','nav.gallery':'Galéria','nav.recipes':'Receptek','nav.contact':'Kontakt →',
+      'nav.about':'Rólunk','nav.history':'Cégtörténet','nav.quality':'Minőségbiztosítás','nav.sustain':'Fenntartható jövő','nav.social':'Társadalmi felelősségvállalás','nav.career':'Karrier',
+      'nav.spawn':'Gombacsíra','nav.compost':'Gombakomposzt','nav.fresh':'Friss gomba','nav.canned':'Konzervgomba',
+      'hero.pill':'Közép-Európa vezető gombaipari csoportosulása',
+      'hero.title':'A <span class="italic">természet</span><br><span class="red">koronája</span><br>tányérodon.',
+      'hero.btnProducts':'Termékeink','hero.btnAbout':'Rólunk',
+      'hero.statYears':'Év tapasztalat','hero.statSqm':'M² termesztés','hero.statHouses':'Gombaház',
+      'tk.spawn':'Csíraüzem','tk.compost':'Komposztüzem','tk.growing':'Gombatermesztés','tk.cooling':'Hűtőház és csomagolóüzem','tk.canning':'Konzervüzem','tk.fleet':'Saját gépjárműflotta','tk.quality':'Minőség',
+      'partners.label':'Akik <span class="italic">megbíznak</span> bennünk.',
+      'wk.label':'Teljes kínálat','wk.h1':'Termék<br><span class="hi">kategóriáink</span><span class="ho"></span>',
+      'wk.sub':'Az alapanyaggyártástól a kész termékig – négy kategória, egyetlen megbízható forrásból. Saját termesztés, saját labor, saját szállítás.',
+      'wk.statCat':'Kategória','wk.statYears':'Év tapasztalat','wk.statSqm':'m² termesztés',
+      'wk.c1.chip1':'Vákuumhűtés','wk.c1.chip2':'Napi szállítás','wk.c1.chip3':'IFS minősített',
+      'wk.c1.tag':'Friss','wk.c1.name':'Friss Gomba','wk.c1.bulk':'Bulk',
+      'wk.c1.desc':'Fehér és barna csiperke, laska, portobello, shiitake, shimeji – 45 000 m²-en termesztve, szedés után 1 órán belül vákuumhűtve, saját flottával szállítva.',
+      'wk.cta.products':'Termékeink','wk.cta.inquire':'Érdeklődjön',
+      'wk.c2.tag':'Feldolgozott','wk.c2.name':'Gomba­konzerv',
+      'wk.c2.u1':'Tartósítószer nélkül','wk.c2.u2':'120 g – 2,2 kg kiszerelés','wk.c2.u3':'Egész · Szeletelt · Aprított','wk.c2.u4':'Retail, HoReCa, feldolgozóipar',
+      'wk.c3.name':'Gomba­komposzt','wk.c3.u1':'Saját Phase III komposztüzem','wk.c3.u2':'Közép-Európa legmodernebb telephelyei között','wk.c3.u3':'EU export partnerek',
+      'wk.c3.phase':'Fázis','wk.c3.export':'Export','wk.c3.own':'Saját',
+      'wk.c4.tag':'Laboratórium','wk.c4.name':'Gomba­csíra',
+      'wk.c4.b1':'Mo. egyetlen ipari gyára','wk.c4.b2':'Hibrid fajták','wk.c4.b3':'Steril labor','wk.c4.b4':'EU export',
+      'wk.c4.u1':'Mikrobiológiai & mikológiai háttér','wk.c4.u2':'Kísérleti fermentációs kapacitás','wk.c4.u3':'5 kg – 10 kg kiszerelés, bulk rendelés',
+      'wk.bot.h':'Részletes terméklista és árajánlat?','wk.bot.p':'Személyre szabott ajánlatot adunk 24 órán belül.','wk.bot.quote':'Ajánlatot kérek',
+      'about.pill':'Tartósítószer nélkül','about.label':'Rólunk','about.title':'Három évtized<br>a gomba <span class="italic red">szenvedélye.</span>',
+      'about.p1':'A Korona Gombaipari Egyesülést <strong>családi vállalkozások hozták létre</strong> azért, hogy a hagyományokra építve, de a legmodernebb technológiákat alkalmazva közösen fejlődjenek. Ennek köszönhetően mára Közép-Európa egyik meghatározó gombaipari szereplőjévé váltunk.',
+      'about.p2':'A teljes gombatermesztési folyamatot lefedjük: a szaporítóanyag előállításától és a komposztgyártástól kezdve a magas színvonalú termesztésen át a feldolgozásig – így <strong>garantáljuk a folyamatos, megbízható minőséget</strong>.',
+      'about.p3':'Több száz kollégánkkal és elsősorban hazai partnereinkkel nap mint nap azon dolgozunk, hogy termékeink frissen, kiváló minőségben jussanak el a magyar és nemzetközi piacokra. <strong>Folyamatosan fejlődünk</strong>: növeljük hatékonyságunkat, új technológiákat vezetünk be, és kiemelt figyelmet fordítunk a kutatás-fejlesztésre.',
+      'about.p4':'Célunk, hogy partnereinket mindig a lehető legmagasabb színvonalon, megbízhatóan szolgáljuk ki. Elhivatottak vagyunk abban, hogy minden egyes nap friss, biztonságos és kiváló minőségű élelmiszer kerüljön vásárlóink asztalára – mert hisszük, hogy <strong>a minőség nem kompromisszum kérdése, hanem felelősség</strong>.',
+      'about.p5':'<em>Szenvedélyünk a gomba, és ezt a szenvedélyt visszük bele minden egyes nap a munkánkba.</em>',
+      'about.more':'Bővebben ↓','about.less':'Kevesebb ↑',
+      'hist.label':'Cégtörténetünk','hist.title':'Az út, amit <span class="italic red">bejártunk.</span>',
+      'hist.t1.y':'1990-es évek','hist.t1.t':'Alapítás – Demjén, Heves megye. Első holland típusú gombaházak megépítése, családi vállalkozások összefogásával.',
+      'hist.t2.y':'2000-es évek','hist.t2.t':'45.000 m² termesztőfelület, ~100 automatizált gombaház, saját hűtős szállítóflotta kiépítése.',
+      'hist.t3.y':'2010-es évek','hist.t3.t':'Magyarország első ipari gombacsíra-laboratóriuma, Phase III komposztüzem, kutatás-fejlesztési kapacitás.',
+      'hist.t4.y':'Ma','hist.t4.t':'EU export, IFS & HACCP minősítés, folyamatos technológiai fejlesztés. Közép-Európa egyik meghatározó gombaipari szereplője.',
+      'qa.label':'Minőségbiztosítás','qa.title':'Tanúsított <em>minőség.</em>',
+      'qa.sub':'Független, akkreditált auditok garantálják, hogy minden gombánk a legmagasabb élelmiszer-biztonsági és fenntarthatósági szabványoknak feleljen meg – a komposzttól a polcig.',
+      'qa.c1.d':'Nemzetközi mezőgazdasági jó gyakorlat tanúsítvány – felelős termesztés, teljes nyomon követhetőség és élelmiszer-biztonság a komposzttól a betakarításig.','qa.c1.t':'Mezőgazdaság',
+      'qa.c2.d':'A vezető európai kereskedelmi láncok által elfogadott élelmiszer-biztonsági és minőségirányítási szabvány a teljes feldolgozási folyamatra.','qa.c2.t':'Feldolgozás',
+      'qa.c3.d':'Akkreditált független szervezet bio tanúsítása – a környezettudatos, vegyszermentes termesztés bizonyítéka az EU 2018/848 rendelet szerint.','qa.c3.t':'Bio termesztés',
+      'qa.c4.d':'A munkavállalók jogainak, biztonságának és tisztességes bánásmódjának független, gazdaságon belüli értékelése – a GLOBALG.A.P. szociális kiegészítése.','qa.c4.t':'Szociális felelősség',
+      'qa.c5.d':'Élelmiszer-biztonsági kockázatok módszeres azonosítása és kezelése a teljes termelési láncban – a Codex Alimentarius szerint, minden folyamatba beépítve.','qa.c5.t':'Élelmiszer-biztonság',
+      'qa.hint':'Görgessen a tanúsítványokon át','qa.count':'5 szabvány',
+      'proc.label':'Hogyan dolgozunk','proc.title':'A termelőtől <span class="italic">az asztalodra.</span>',
+      'proc.s1.t':'Komposzt­gyártás','proc.s1.d':'Saját Phase III komposztüzem – Közép-Európa egyik legmodernebb telephelye.',
+      'proc.s2.t':'Csíra­oltás','proc.s2.d':'Steril laborban, saját gombacsírával – hibrid fajtákkal a legjobb hozamért.',
+      'proc.s3.t':'Termesztés','proc.s3.d':'~100 automatizált gombaházban, 45.000 m²-en, képzett szakemberek felügyeletével.',
+      'proc.s4.t':'Hűtés & Csomagolás','proc.s4.d':'Vákuumhűtők, nagyteljesítményű osztályozó sorok – 1 órán belül hűtve.',
+      'proc.s5.t':'Szállítás','proc.s5.d':'Saját hűtős flottával, közvetlenül a partnerekhez – minden nap frissen.',
+      'cta.eyebrow':'Együttműködés','cta.title':'Legyünk<br><em>partnerei</em><br>egymásnak.',
+      'cta.sub':'Megbízható gombabeszállítót keres? Érdeklődik gombacsíra vagy gombakomposzt iránt? Írjon nekünk – 24 órán belül válaszolunk.','cta.btn':'Kapcsolatfelvétel',
+      'gh.title':'Gombahíradó és <em>friss receptjeink.</em>','gh.placeholder':'Email cím','gh.btn':'Feliratkozom',
+      'ft.tag':'Közép-Európa egyik vezető gombaipari csoportosulása. Gombatermesztés, kereskedelem, feldolgozás – egy kézből, 30 éve.',
+      'ft.h.prod':'Termékeink','ft.h.seg':'Szegmensek','ft.h.info':'Információk',
+      'ft.lists':'Terméklisták','ft.proc':'Feldolgozóipar','ft.grow':'Gombatermesztők','ft.exp':'Export partnerek',
+      'ft.process':'Folyamatunk','ft.contact':'Kapcsolat','ft.privacy':'Adatvédelem',
+      'ft.copy':'© 2026 Korona Gombaipari Egyesülés · Minden jog fenntartva'
+    },
+    en: {
+      _title:'Korona Gomba – Central Europe\'s leading mushroom group',
+      _desc :'Korona Mushroom Association – Central Europe\'s leading mushroom industry group. Fresh mushrooms, spawn, mushroom compost. 30+ years of experience, 45,000 m² of cultivation area.',
+      'nav.home':'Home','nav.products':'Products','nav.gallery':'Gallery','nav.recipes':'Recipes','nav.contact':'Contact →',
+      'nav.about':'About us','nav.history':'Our history','nav.quality':'Quality assurance','nav.sustain':'Sustainable future','nav.social':'Social responsibility','nav.career':'Careers',
+      'nav.spawn':'Mushroom spawn','nav.compost':'Mushroom compost','nav.fresh':'Fresh mushrooms','nav.canned':'Canned mushrooms',
+      'hero.pill':'Central Europe\'s leading mushroom industry group',
+      'hero.title':'The <span class="italic">crown</span> of<br><span class="red">nature</span><br>on your plate.',
+      'hero.btnProducts':'Our products','hero.btnAbout':'About us',
+      'hero.statYears':'Years of experience','hero.statSqm':'m² cultivation','hero.statHouses':'Mushroom houses',
+      'tk.spawn':'Spawn lab','tk.compost':'Compost plant','tk.growing':'Mushroom growing','tk.cooling':'Cold storage & packaging','tk.canning':'Canning plant','tk.fleet':'Own vehicle fleet','tk.quality':'Quality',
+      'partners.label':'Those who <span class="italic">trust</span> us.',
+      'wk.label':'Full range','wk.h1':'Our product<br><span class="hi">categories</span><span class="ho"></span>',
+      'wk.sub':'From raw material to finished product – four categories, one reliable source. Own cultivation, own lab, own logistics.',
+      'wk.statCat':'Categories','wk.statYears':'Years of experience','wk.statSqm':'m² cultivation',
+      'wk.c1.chip1':'Vacuum cooling','wk.c1.chip2':'Daily delivery','wk.c1.chip3':'IFS certified',
+      'wk.c1.tag':'Fresh','wk.c1.name':'Fresh mushrooms','wk.c1.bulk':'Bulk',
+      'wk.c1.desc':'White and brown button, oyster, portobello, shiitake, shimeji – grown on 45,000 m², vacuum-cooled within 1 hour after harvest, delivered with our own fleet.',
+      'wk.cta.products':'Our products','wk.cta.inquire':'Inquire',
+      'wk.c2.tag':'Processed','wk.c2.name':'Canned mushrooms',
+      'wk.c2.u1':'No preservatives','wk.c2.u2':'120 g – 2.2 kg packaging','wk.c2.u3':'Whole · Sliced · Chopped','wk.c2.u4':'Retail, HoReCa, food processing',
+      'wk.c3.name':'Mushroom compost','wk.c3.u1':'Own Phase III compost plant','wk.c3.u2':'Among the most modern sites in Central Europe','wk.c3.u3':'EU export partners',
+      'wk.c3.phase':'Phases','wk.c3.export':'Export','wk.c3.own':'In-house',
+      'wk.c4.tag':'Laboratory','wk.c4.name':'Mushroom spawn',
+      'wk.c4.b1':'Hungary\'s only industrial plant','wk.c4.b2':'Hybrid varieties','wk.c4.b3':'Sterile lab','wk.c4.b4':'EU export',
+      'wk.c4.u1':'Microbiological & mycological background','wk.c4.u2':'Experimental fermentation capacity','wk.c4.u3':'5 kg – 10 kg packaging, bulk orders',
+      'wk.bot.h':'Detailed product list and quote?','wk.bot.p':'We deliver a personalised offer within 24 hours.','wk.bot.quote':'Request a quote',
+      'about.pill':'No preservatives','about.label':'About us','about.title':'Three decades of<br><span class="italic red">passion for mushrooms.</span>',
+      'about.p1':'Korona Mushroom Association was founded by <strong>family-owned businesses</strong> to grow together on tradition while applying the most modern technologies. Today we are one of Central Europe\'s key players in the mushroom industry.',
+      'about.p2':'We cover the entire mushroom production chain: from spawn production and composting through high-quality cultivation to processing – <strong>guaranteeing consistent, reliable quality</strong>.',
+      'about.p3':'With our hundreds of colleagues and primarily domestic partners, we work day after day to deliver our products fresh and in top quality to Hungarian and international markets. <strong>We continuously improve</strong>: increasing efficiency, introducing new technologies, and focusing on R&D.',
+      'about.p4':'Our goal is to serve our partners reliably and at the highest possible level. We are committed to bringing fresh, safe, and excellent quality food to our customers\' tables every day – because we believe that <strong>quality is not a matter of compromise, but of responsibility</strong>.',
+      'about.p5':'<em>Mushrooms are our passion, and we bring this passion into our work every single day.</em>',
+      'about.more':'Read more ↓','about.less':'Read less ↑',
+      'hist.label':'Our history','hist.title':'The road <span class="italic red">we travelled.</span>',
+      'hist.t1.y':'1990s','hist.t1.t':'Founded – Demjén, Heves county. First Dutch-style mushroom houses built, family businesses joining forces.',
+      'hist.t2.y':'2000s','hist.t2.t':'45,000 m² growing area, ~100 automated mushroom houses, own refrigerated logistics fleet built up.',
+      'hist.t3.y':'2010s','hist.t3.t':'Hungary\'s first industrial spawn laboratory, Phase III compost plant, R&D capacity.',
+      'hist.t4.y':'Today','hist.t4.t':'EU export, IFS & HACCP certification, continuous technological development. One of Central Europe\'s leading mushroom industry players.',
+      'qa.label':'Quality assurance','qa.title':'Certified <em>quality.</em>',
+      'qa.sub':'Independent, accredited audits guarantee that every mushroom of ours meets the highest food safety and sustainability standards – from compost to shelf.',
+      'qa.c1.d':'International agricultural good practice standard – responsible cultivation, full traceability and food safety from compost to harvest.','qa.c1.t':'Agriculture',
+      'qa.c2.d':'A food safety and quality management standard accepted by leading European retail chains, covering the entire processing flow.','qa.c2.t':'Processing',
+      'qa.c3.d':'Accredited independent organic certification – proof of environmentally conscious, chemical-free cultivation under EU regulation 2018/848.','qa.c3.t':'Organic',
+      'qa.c4.d':'Independent on-farm assessment of workers\' rights, safety and fair treatment – the social complement to GLOBALG.A.P.','qa.c4.t':'Social responsibility',
+      'qa.c5.d':'Systematic identification and management of food safety risks across the entire production chain – following the Codex Alimentarius, built into every process.','qa.c5.t':'Food safety',
+      'qa.hint':'Scroll through the certifications','qa.count':'5 standards',
+      'proc.label':'How we work','proc.title':'From producer <span class="italic">to your table.</span>',
+      'proc.s1.t':'Compost making','proc.s1.d':'Own Phase III compost plant – one of the most modern in Central Europe.',
+      'proc.s2.t':'Inoculation','proc.s2.d':'In a sterile lab with our own spawn – hybrid varieties for the best yield.',
+      'proc.s3.t':'Cultivation','proc.s3.d':'In ~100 automated mushroom houses on 45,000 m², supervised by trained specialists.',
+      'proc.s4.t':'Cooling & packaging','proc.s4.d':'Vacuum coolers, high-capacity sorting lines – cooled within 1 hour.',
+      'proc.s5.t':'Delivery','proc.s5.d':'With our own refrigerated fleet, straight to partners – fresh every day.',
+      'cta.eyebrow':'Cooperation','cta.title':'Let\'s be<br><em>partners</em><br>together.',
+      'cta.sub':'Looking for a reliable mushroom supplier? Interested in spawn or compost? Write to us – we reply within 24 hours.','cta.btn':'Get in touch',
+      'gh.title':'Mushroom news and <em>our latest recipes.</em>','gh.placeholder':'Email address','gh.btn':'Subscribe',
+      'ft.tag':'One of Central Europe\'s leading mushroom industry groups. Cultivation, trade, processing – from a single source for 30 years.',
+      'ft.h.prod':'Our products','ft.h.seg':'Segments','ft.h.info':'Information',
+      'ft.lists':'Product lists','ft.proc':'Food processing','ft.grow':'Mushroom growers','ft.exp':'Export partners',
+      'ft.process':'Our process','ft.contact':'Contact','ft.privacy':'Privacy',
+      'ft.copy':'© 2026 Korona Mushroom Association · All rights reserved'
+    },
+    de: {
+      _title:'Korona Gomba – Mitteleuropas führende Pilzindustriegruppe',
+      _desc :'Korona Pilzindustrie-Vereinigung – Mitteleuropas führende Pilzindustriegruppe. Frische Pilze, Pilzbrut, Pilzkompost. 30+ Jahre Erfahrung, 45.000 m² Anbaufläche.',
+      'nav.home':'Home','nav.products':'Produkte','nav.gallery':'Galerie','nav.recipes':'Rezepte','nav.contact':'Kontakt →',
+      'nav.about':'Über uns','nav.history':'Firmengeschichte','nav.quality':'Qualitätssicherung','nav.sustain':'Nachhaltige Zukunft','nav.social':'Soziale Verantwortung','nav.career':'Karriere',
+      'nav.spawn':'Pilzbrut','nav.compost':'Pilzkompost','nav.fresh':'Frische Pilze','nav.canned':'Konservenpilze',
+      'hero.pill':'Mitteleuropas führende Pilzindustriegruppe',
+      'hero.title':'Die <span class="italic">Krone</span> der<br><span class="red">Natur</span><br>auf deinem Teller.',
+      'hero.btnProducts':'Unsere Produkte','hero.btnAbout':'Über uns',
+      'hero.statYears':'Jahre Erfahrung','hero.statSqm':'M² Anbau','hero.statHouses':'Pilzhäuser',
+      'tk.spawn':'Brutlabor','tk.compost':'Kompostwerk','tk.growing':'Pilzanbau','tk.cooling':'Kühlhaus & Verpackung','tk.canning':'Konservenwerk','tk.fleet':'Eigene Fahrzeugflotte','tk.quality':'Qualität',
+      'partners.label':'Wer uns <span class="italic">vertraut</span>.',
+      'wk.label':'Komplettes Sortiment','wk.h1':'Unsere<br><span class="hi">Produkt&shy;kategorien</span><span class="ho"></span>',
+      'wk.sub':'Vom Rohstoff bis zum Fertigprodukt – vier Kategorien aus einer zuverlässigen Quelle. Eigener Anbau, eigenes Labor, eigene Logistik.',
+      'wk.statCat':'Kategorien','wk.statYears':'Jahre Erfahrung','wk.statSqm':'m² Anbau',
+      'wk.c1.chip1':'Vakuumkühlung','wk.c1.chip2':'Tägliche Lieferung','wk.c1.chip3':'IFS-zertifiziert',
+      'wk.c1.tag':'Frisch','wk.c1.name':'Frische Pilze','wk.c1.bulk':'Bulk',
+      'wk.c1.desc':'Weiße und braune Champignons, Austernpilze, Portobello, Shiitake, Shimeji – auf 45 000 m² angebaut, innerhalb einer Stunde nach der Ernte vakuumgekühlt, mit eigener Flotte ausgeliefert.',
+      'wk.cta.products':'Unsere Produkte','wk.cta.inquire':'Anfragen',
+      'wk.c2.tag':'Verarbeitet','wk.c2.name':'Konservenpilze',
+      'wk.c2.u1':'Ohne Konservierungsstoffe','wk.c2.u2':'120 g – 2,2 kg Gebinde','wk.c2.u3':'Ganz · Geschnitten · Gehackt','wk.c2.u4':'Handel, HoReCa, Lebensmittelindustrie',
+      'wk.c3.name':'Pilzkompost','wk.c3.u1':'Eigenes Phase-III-Kompostwerk','wk.c3.u2':'Zu den modernsten Anlagen Mitteleuropas','wk.c3.u3':'EU-Exportpartner',
+      'wk.c3.phase':'Phasen','wk.c3.export':'Export','wk.c3.own':'Eigen',
+      'wk.c4.tag':'Labor','wk.c4.name':'Pilzbrut',
+      'wk.c4.b1':'Ungarns einzige Industrieanlage','wk.c4.b2':'Hybridsorten','wk.c4.b3':'Steriles Labor','wk.c4.b4':'EU-Export',
+      'wk.c4.u1':'Mikrobiologischer & mykologischer Hintergrund','wk.c4.u2':'Experimentelle Fermentationskapazität','wk.c4.u3':'5 kg – 10 kg Gebinde, Großbestellungen',
+      'wk.bot.h':'Ausführliche Produktliste & Angebot?','wk.bot.p':'Wir senden ein individuelles Angebot innerhalb von 24 Stunden.','wk.bot.quote':'Angebot anfordern',
+      'about.pill':'Ohne Konservierungsstoffe','about.label':'Über uns','about.title':'Drei Jahrzehnte<br><span class="italic red">Pilzleidenschaft.</span>',
+      'about.p1':'Die Korona Pilzindustrie-Vereinigung wurde von <strong>Familienunternehmen gegründet</strong>, um gemeinsam auf Traditionen aufzubauen und modernste Technologien einzusetzen. Heute zählen wir zu den führenden Akteuren der Pilzindustrie in Mitteleuropa.',
+      'about.p2':'Wir decken die gesamte Pilzproduktionskette ab: von der Brutherstellung und der Kompostgewinnung über den qualitativ hochwertigen Anbau bis zur Verarbeitung – <strong>so garantieren wir gleichbleibende, zuverlässige Qualität</strong>.',
+      'about.p3':'Mit unseren Hunderten von Kollegen und vorrangig inländischen Partnern arbeiten wir Tag für Tag daran, dass unsere Produkte frisch und in höchster Qualität auf die ungarischen und internationalen Märkte gelangen. <strong>Wir entwickeln uns kontinuierlich weiter</strong>: steigern unsere Effizienz, setzen neue Technologien ein und legen besonderen Wert auf Forschung und Entwicklung.',
+      'about.p4':'Unser Ziel ist es, unseren Partnern jederzeit auf höchstem Niveau zuverlässig zu dienen. Wir sind engagiert, jeden Tag frische, sichere und hochwertige Lebensmittel auf die Tische unserer Kunden zu bringen – denn wir glauben, dass <strong>Qualität keine Frage des Kompromisses, sondern der Verantwortung ist</strong>.',
+      'about.p5':'<em>Pilze sind unsere Leidenschaft, und diese Leidenschaft bringen wir jeden Tag in unsere Arbeit ein.</em>',
+      'about.more':'Mehr lesen ↓','about.less':'Weniger ↑',
+      'hist.label':'Unsere Geschichte','hist.title':'Der Weg, den<br><span class="italic red">wir gegangen sind.</span>',
+      'hist.t1.y':'1990er Jahre','hist.t1.t':'Gründung – Demjén, Komitat Heves. Bau der ersten Pilzhäuser nach holländischem Vorbild, Zusammenschluss von Familienunternehmen.',
+      'hist.t2.y':'2000er Jahre','hist.t2.t':'45.000 m² Anbaufläche, ~100 automatisierte Pilzhäuser, Aufbau einer eigenen Kühlfahrzeugflotte.',
+      'hist.t3.y':'2010er Jahre','hist.t3.t':'Ungarns erstes industrielles Pilzbrutlabor, Phase-III-Kompostwerk, F&E-Kapazität.',
+      'hist.t4.y':'Heute','hist.t4.t':'EU-Export, IFS- und HACCP-Zertifizierung, kontinuierliche technologische Weiterentwicklung. Einer der führenden Akteure der Pilzindustrie in Mitteleuropa.',
+      'qa.label':'Qualitätssicherung','qa.title':'Zertifizierte <em>Qualität.</em>',
+      'qa.sub':'Unabhängige, akkreditierte Audits garantieren, dass jeder unserer Pilze die höchsten Lebensmittelsicherheits- und Nachhaltigkeitsstandards erfüllt – vom Kompost bis ins Regal.',
+      'qa.c1.d':'Internationaler Standard für gute landwirtschaftliche Praxis – verantwortungsvoller Anbau, vollständige Rückverfolgbarkeit und Lebensmittelsicherheit vom Kompost bis zur Ernte.','qa.c1.t':'Landwirtschaft',
+      'qa.c2.d':'Von führenden europäischen Handelsketten anerkannter Lebensmittelsicherheits- und Qualitätsmanagementstandard für den gesamten Verarbeitungsprozess.','qa.c2.t':'Verarbeitung',
+      'qa.c3.d':'Akkreditierte unabhängige Bio-Zertifizierung – Beleg für umweltbewussten, chemiefreien Anbau gemäß EU-Verordnung 2018/848.','qa.c3.t':'Bio-Anbau',
+      'qa.c4.d':'Unabhängige betriebsinterne Bewertung der Rechte, Sicherheit und fairen Behandlung der Mitarbeiter – soziale Ergänzung zu GLOBALG.A.P.','qa.c4.t':'Soziale Verantwortung',
+      'qa.c5.d':'Systematische Identifizierung und Beherrschung von Lebensmittelsicherheitsrisiken in der gesamten Produktionskette – gemäß Codex Alimentarius, in jeden Prozess integriert.','qa.c5.t':'Lebensmittelsicherheit',
+      'qa.hint':'Durch die Zertifikate scrollen','qa.count':'5 Standards',
+      'proc.label':'So arbeiten wir','proc.title':'Vom Erzeuger <span class="italic">auf deinen Tisch.</span>',
+      'proc.s1.t':'Kompostherstellung','proc.s1.d':'Eigenes Phase-III-Kompostwerk – eine der modernsten Anlagen Mitteleuropas.',
+      'proc.s2.t':'Beimpfung','proc.s2.d':'In sterilem Labor mit eigener Brut – Hybridsorten für den besten Ertrag.',
+      'proc.s3.t':'Anbau','proc.s3.d':'In ~100 automatisierten Pilzhäusern auf 45.000 m², unter Aufsicht ausgebildeter Fachleute.',
+      'proc.s4.t':'Kühlung & Verpackung','proc.s4.d':'Vakuumkühler, leistungsstarke Sortierlinien – innerhalb einer Stunde gekühlt.',
+      'proc.s5.t':'Lieferung','proc.s5.d':'Mit eigener Kühlfahrzeugflotte direkt zu den Partnern – jeden Tag frisch.',
+      'cta.eyebrow':'Zusammenarbeit','cta.title':'Werden wir<br><em>Partner</em><br>füreinander.',
+      'cta.sub':'Suchen Sie einen verlässlichen Pilzlieferanten? Interessiert an Pilzbrut oder Pilzkompost? Schreiben Sie uns – wir antworten innerhalb von 24 Stunden.','cta.btn':'Kontakt aufnehmen',
+      'gh.title':'Pilznachrichten und <em>unsere neuesten Rezepte.</em>','gh.placeholder':'E-Mail-Adresse','gh.btn':'Abonnieren',
+      'ft.tag':'Eine der führenden Pilzindustriegruppen Mitteleuropas. Anbau, Handel, Verarbeitung – aus einer Hand seit 30 Jahren.',
+      'ft.h.prod':'Unsere Produkte','ft.h.seg':'Segmente','ft.h.info':'Informationen',
+      'ft.lists':'Produktlisten','ft.proc':'Lebensmittelindustrie','ft.grow':'Pilzanbauer','ft.exp':'Export-Partner',
+      'ft.process':'Unser Prozess','ft.contact':'Kontakt','ft.privacy':'Datenschutz',
+      'ft.copy':'© 2026 Korona Pilzindustrie-Vereinigung · Alle Rechte vorbehalten'
+    }
+  };
+
+  function apply(lang){
+    const dict = T[lang] || T.hu;
+    document.documentElement.lang = lang;
+    if(dict._title){ const t = document.getElementById('pageTitle'); if(t) t.textContent = dict._title; }
+    if(dict._desc){ const m = document.getElementById('metaDesc'); if(m) m.setAttribute('content', dict._desc); }
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const k = el.getAttribute('data-i18n');
+      if(dict[k]!==undefined) el.textContent = dict[k];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+      const k = el.getAttribute('data-i18n-html');
+      if(dict[k]!==undefined) el.innerHTML = dict[k];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+      const k = el.getAttribute('data-i18n-placeholder');
+      if(dict[k]!==undefined) el.setAttribute('placeholder', dict[k]);
+    });
+    // "Bővebben" toggle
+    const ab = document.getElementById('aboutToggle');
+    if(ab){ ab.textContent = (ab.dataset.open==='1') ? (dict['about.less']||'Less') : (dict['about.more']||'More'); }
+    // Buttons active state
+    document.querySelectorAll('#langSwitch .lang-btn').forEach(b=>{
+      b.classList.toggle('active', b.dataset.lang===lang);
+    });
+    try{ localStorage.setItem('lang', lang); }catch(e){}
+  }
+  window.applyI18n = ()=>apply(document.documentElement.lang || 'hu');
+
+  document.addEventListener('click', e=>{
+    const b = e.target.closest('#langSwitch .lang-btn');
+    if(b) apply(b.dataset.lang);
+  });
+
+  let saved = 'hu';
+  try{ saved = localStorage.getItem('lang') || 'hu'; }catch(e){}
+  apply(saved);
+})();
+</script>
 
 <script src="assets/js/main.js"></script>
 <script>

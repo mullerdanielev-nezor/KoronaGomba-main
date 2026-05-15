@@ -1014,7 +1014,12 @@ footer{background:var(--g1);padding:80px 6vw 40px;margin-top:8px}
   .wk-c2,.wk-c3,.wk-c4{height:360px}
   .wk-bottom{padding:28px 24px}
   .wk-h1{font-size:44px}
-  .wk-desc,.wk-cta,.wk-usps,.wk-sizes,.wk-badges,.wk-c3-stats{
+  .wk-card.wk-in-view .wk-desc,
+  .wk-card.wk-in-view .wk-cta,
+  .wk-card.wk-in-view .wk-usps,
+  .wk-card.wk-in-view .wk-sizes,
+  .wk-card.wk-in-view .wk-badges,
+  .wk-card.wk-in-view .wk-c3-stats{
     opacity:1!important;translate:0 0!important;
   }
   .wk-c3 .wk-body{grid-template-columns:1fr}

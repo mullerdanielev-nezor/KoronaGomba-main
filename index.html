@@ -37,6 +37,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
+  transform: scale(1.04);
+  transform-origin: center top;
 }
 
 /* Placeholder bg amíg nincs videó */
@@ -47,12 +50,7 @@
 .hero-video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0,0,0,0.55) 0%,
-    rgba(0,0,0,0.35) 40%,
-    rgba(0,0,0,0.5) 100%
-  );
+  background: rgba(0,0,0,.3);
   z-index: 1;
 }
 
@@ -70,6 +68,46 @@
 
 .hero-video-content h1 {
   text-align: center;
+}
+.hero-video-content h1 .italic { color: #1A5C1A; }
+.hero-video-content h1 .red { color: #7B1A1A; }
+.hero-video-content .hero-stat-num,
+.hero-video-content .hero-stat-num sup {
+  color: #0D3B0D;
+}
+.hero-video-content .hero-stat-label {
+  color: #0D3B0D;
+}
+.hero-video-content {
+  border: 1.5px solid rgba(255,255,255,.6);
+  border-radius: 18px;
+  background: rgba(255,255,255,.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 36px 40px 40px;
+  margin: 80px 24px 24px;
+  max-width: 700px;
+  box-shadow: 0 8px 40px -12px rgba(0,0,0,.35);
+}
+@media (max-width: 640px) {
+  .hero-video-content { padding: 28px 20px 32px; margin: 64px 12px 16px; }
+  .hero-video-content h1 { font-size: clamp(42px, 11vw, 64px); line-height: 1.02; }
+  .hero-video-content .hero-actions {
+    flex-direction: row !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .hero-video-content .hero-actions .btn-primary,
+  .hero-video-content .hero-actions .btn-secondary {
+    flex: 0 1 auto;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  /* Nav legyen mobilon teljesen átlátszatlan, hogy ne csússzon bele a tartalom */
+  nav { background: #fff !important; box-shadow: 0 6px 20px rgba(13,59,13,.12) !important; }
+  /* Process szekció rejtve mobilon */
+  #folyamat { display: none !important; }
 }
 
 .hero-video-content .hero-sub {
@@ -369,7 +407,7 @@
 <section class="hero hero-video">
   <div class="hero-video-bg">
     <video autoplay muted loop playsinline id="heroVideo">
-      <!-- <source src="assets/video/hero.mp4" type="video/mp4"> -->
+      <source src="https://res.cloudinary.com/djrtrnpzn/video/upload/v1778829711/N%C3%A9vtelen_terv_8_usqoae.mp4" type="video/mp4">
     </video>
     <div class="hero-video-overlay"></div>
   </div>
@@ -892,13 +930,17 @@
 .qa-hint{padding:0 6vw 32px;display:flex;justify-content:space-between;font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.4)}
 
 @media (max-width:880px){
-  .qa-pin-track-h{height:380vh}
-  .qa-pin-head{padding:20px 6vw 12px}
-  .qa-pin-head h2{font-size:34px}
+  .qa-pin{margin:64px 0 80px}
+  .qa-pin-track-h{height:480vh}
+  .qa-pin-sticky{justify-content:flex-start;padding:48px 0 24px}
+  .qa-pin-head{padding:0 6vw 16px}
+  .qa-pin-head h2{font-size:32px;margin-top:8px}
   .qa-pin-head p{font-size:14px}
-  .qa-pin-track{padding:16px 6vw 24px;gap:18px}
-  .qa-card{flex:0 0 82vw;min-height:380px;padding:24px}
-  .qa-card .mono{font-size:64px}
+  .qa-pin-track{padding:12px 6vw 16px;gap:18px}
+  .qa-card{flex:0 0 82vw;min-height:340px;padding:22px}
+  .qa-card .mono{font-size:60px}
+  .qa-progress{margin:0 6vw 16px}
+  .qa-hint{padding:0 6vw 48px}
 }
 </style>
 
@@ -1071,7 +1113,7 @@
 .gh-sub-form .legal{font-size:11px;color:rgba(255,255,255,.45);line-height:1.5;margin-top:4px}
 .gh-sub-form .legal a{color:rgba(255,255,255,.7);text-decoration:underline}
 @media(max-width:820px){
-  .gh-sub{grid-template-columns:1fr;padding:40px 28px;gap:32px;margin:32px 16px}
+  .gh-sub{grid-template-columns:1fr;padding:40px 28px;gap:32px;margin:32px 0}
   .gh-sub::before,.gh-sub::after{width:200px;height:200px}
 }
 </style>
@@ -1385,6 +1427,21 @@
 })();
 </script>
 
+<script>
+/* Mobil: wk-kártyák desktop hover-szerű viselkedés érintésre */
+(function(){
+  if(!window.matchMedia('(max-width:768px)').matches) return;
+  document.querySelectorAll('.wk-card').forEach(card=>{
+    card.addEventListener('click', e=>{
+      // ne reagáljon, ha link/gomb belül van
+      if(e.target.closest('a,button')) return;
+      const wasOpen = card.classList.contains('wk-in-view');
+      document.querySelectorAll('.wk-card.wk-in-view').forEach(c=>c.classList.remove('wk-in-view'));
+      if(!wasOpen) card.classList.add('wk-in-view');
+    });
+  });
+})();
+</script>
 <script src="assets/js/main.js"></script>
 <script>
 // Hero partner modal
